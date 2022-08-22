@@ -1,83 +1,29 @@
 /*--- Home.js CSS --- */
-
-.App {
+.search, .rank {
     text-align: center;
+    width: 1200px;
+    margin : auto;
 }
 
-header {
-    background-color: rgba(255, 51, 51, 0.77);
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(15px + 2vmin);
-    color: white;
-
-    margin-bottom: 50px;
-
-    position:relative;
+.hidden {
+    visibility: hidden;
 }
 
-header h1 {
-    font-size: 30px;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-#openMenu {
-    padding: 0;
-    margin-left:10px;
-
-    position:absolute;
-    left:0;
-    height: 60px;
-    width: 60px;
-    z-index: 1;
-}
-
-.search button {
-    font-size: 16.5px;
-    font-weight: bold;
-    color: white;
-
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-
-    height: 45px;
-    width: 163px;
-}
-
-.select {
-    background-color: rgb(41, 128, 185);
-}
-
-.unselect {
-    background-color: rgb(182, 180, 180);
-}
-
-.search input {
-    width: 720px;
-    height: 45px;
-}
-
-.search {
-    margin-bottom: 100px;
-}
+/* 랭킹 */
 
 .totalRank,
 .ewhaRank,
 .sinChonRank,
-.yeonNamRank {
-    margin-top: 25px;
-    margin-bottom: 70px;
-    height: 200px;
-    border-top: 4px solid rgb(127, 127, 127);
-    border-bottom: 4px solid rgb(127, 127, 127);
+.yeonHuiRank {
+    margin-bottom: 90px;
+    height: 350px;
+    border-top: 3px solid rgb(127, 127, 127);
+    border-bottom: 3px solid rgb(127, 127, 127);
+
     position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rank h2 {
@@ -88,22 +34,78 @@ header h1 {
     padding-right: 10px;
     margin:0;
 
-    background-color: rgb(224, 224, 224);
-    color: rgb(51, 51, 51);
-    font-size: 20px;
+    color: #939393;
+
+    font-size: 25px;
+    font-weight: 500;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    position: absolute;
-    float:left;
-    bottom : 180px;
-    left: 30px;
+
 }
 
 .rank box {
     height:50px;
 }
 
-/*--- Home.js CSS --- */
+/* 랭킹 음식점 */
+.first, .second,.third {
+    width: 370px;
+    height: 300px;
+
+    padding-right: 10px;
+    padding-left: 10px;
+
+    display: inline-block;
+    margin: auto 0;
+}
+
+.first, .second {
+    border-right: 1.5px solid #939393;
+}
+
+.img {
+    clear:both;
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+
+    position: relative;
+    top: 20px;
+    left: 34px;
+
+    margin:0px;
+}
+
+.numberIcon {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+
+    float: left;
+    position: relative;
+    left:6px;
+}
+
+.storeName {
+    font-size: 35px;
+    margin: 0;
+    position: relative;
+    left:10px;
+}
+
+.storeType, .dalPoint {
+    margin: 3px 0;
+    font-size: 20px;
+    position: relative;
+    left:10px;
+}
+
+.rank h3 {
+    margin-left: 10px;
+    float: left;
+    font-size: 40px;
+}

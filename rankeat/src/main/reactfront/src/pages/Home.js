@@ -1,71 +1,135 @@
 /* 메인 페이지 */
 import '../css/Home.css';
-import {useState} from "react";
+import React, {useState} from "react";
+import AppLayout from "./AppLayout";
+import { AiOutlineSearch } from "react-icons/ai"
+import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri"
+import { IoMoon } from "react-icons/io5"
 
 const Home = () => {
-    const [searchWhat, setSearchWhat] = useState("store"); //음식점 검색 or 맛집 리스트 검색
+    const [loginState, setLoginState] = useState(true);
 
     return (
         <div className="Home">
-            {/* 상단바 */}
-            <div className="header">
-                <button id="openMenu">메뉴</button>
-                <header>
-                    <h1>RankEat</h1>
-                </header>
-            </div>
-
-            {/* 검색창 */}
-            <div className="search">
-                <div className="searchSelectBt">
-                    <button
-                        className={
-                            searchWhat === "store" ? "select" : "unselect"
-                        }
-                        id="storeSearch"
-                        onClick={() => setSearchWhat("store")}
-                    >
-                        음식점 검색
-                    </button>
-                    <button
-                        className={
-                            searchWhat === "list" ? "select" : "unselect"
-                        }
-                        id="listSearch"
-                        onClick={() => setSearchWhat("list")}
-                    >
-                        맛집 리스트 검색
-                    </button>
-                </div>
-                <input id="searchBar" type="text"></input>
-            </div>
+            <AppLayout loginState={loginState}/>
 
             {/* 음식점 랭킹 */}
             <div className="rank">
+                <h2>
+                    이번주 총 랭킹
+                </h2>
                 <div className="totalRank">
-                    <h2>
-                        {">"}
-                        {">"} 이번주 총 랭킹
-                    </h2>
+                    <div>
+                        <div className={"first"} id={"total1st"}>
+                            <RiNumber1 className={"numberIcon"}/>
+                            <h3 className={"storeName"}> 음식점 1 </h3>
+                            <div className={"storeType"}> 한식 </div>
+                            <div className={"dalPoint"}><IoMoon/> 3.5 </div>
+                            <div className={"img"}> <img/> </div>
+                        </div>
+                        <div className={"second"} id={"total2nd"}>
+                            <RiNumber2 className={"numberIcon"}/>
+                            <h3 className={"storeName"}> 음식점 1 </h3>
+                            <div className={"storeType"}> 한식 </div>
+                            <div className={"dalPoint"}><IoMoon/> 3.5 </div>
+                            <div className={"img"}> <img/> </div>
+                        </div>
+                        <div className={"third"} id={"total3rd"}>
+                            <RiNumber3 className={"numberIcon"}/>
+                            <h3 className={"storeName"}> 음식점 1 </h3>
+                            <div className={"storeType"}> 한식 </div>
+                            <div className={"dalPoint"}><IoMoon/> 3.5 </div>
+                            <div className={"img"}> <img/> </div>
+                        </div>
+                    </div>
                 </div>
 
+                <h2>
+                    이번주 이대 랭킹
+                </h2>
                 <div className="ewhaRank">
-                    <h2>
-                        {">"}
-                        {">"} 이번주 이대 랭킹
-                    </h2>
+                    <div>
+                        <div className={"first"} id={"total1st"}>
+                            <RiNumber1 className={"numberIcon"}/>
+                            <h3 className={"storeName"}> 음식점 1 </h3>
+                            <div className={"storeType"}> 한식 </div>
+                            <div className={"dalPoint"}><IoMoon/> 3.5 </div>
+                            <div className={"img"}> <img/> </div>
+                        </div>
+                        <div className={"second"} id={"total2nd"}>
+                            <RiNumber2 className={"numberIcon"}/>
+                            <h3 className={"storeName"}> 음식점 1 </h3>
+                            <div className={"storeType"}> 한식 </div>
+                            <div className={"dalPoint"}><IoMoon/> 3.5 </div>
+                            <div className={"img"}> <img/> </div>
+                        </div>
+                        <div className={"third"} id={"total3rd"}>
+                            <RiNumber3 className={"numberIcon"}/>
+                            <h3 className={"storeName"}> 음식점 1 </h3>
+                            <div className={"storeType"}> 한식 </div>
+                            <div className={"dalPoint"}><IoMoon/> 3.5 </div>
+                            <div className={"img"}> <img/> </div>
+                        </div>
+                    </div>
                 </div>
+
+                <h2>
+                    이번주 신촌 랭킹
+                </h2>
                 <div className="sinChonRank">
-                    <h2>
-                        {">"}
-                        {">"} 이번주 신촌 랭킹
-                    </h2>
+                    <div>
+                        <div className={"first"} id={"total1st"}>
+                            <RiNumber1 className={"numberIcon"}/>
+                            <h3 className={"storeName"}> 음식점 1 </h3>
+                            <div className={"storeType"}> 한식 </div>
+                            <div className={"dalPoint"}><IoMoon/> 3.5 </div>
+                            <div className={"img"}> <img/> </div>
+                        </div>
+                        <div className={"second"} id={"total2nd"}>
+                            <RiNumber2 className={"numberIcon"}/>
+                            <h3 className={"storeName"}> 음식점 1 </h3>
+                            <div className={"storeType"}> 한식 </div>
+                            <div className={"dalPoint"}><IoMoon/> 3.5 </div>
+                            <div className={"img"}> <img/> </div>
+                        </div>
+                        <div className={"third"} id={"total3rd"}>
+                            <RiNumber3 className={"numberIcon"}/>
+                            <h3 className={"storeName"}> 음식점 1 </h3>
+                            <div className={"storeType"}> 한식 </div>
+                            <div className={"dalPoint"}><IoMoon/> 3.5 </div>
+                            <div className={"img"}> <img/> </div>
+
+                        </div>
+                    </div>
                 </div>
-                <div className="yeonNamRank">
-                    <h2>
-                        {">"}
-                        {">"}이번주 연남 랭킹
-                    </h2>
+
+                <h2>
+                    이번주 연희 랭킹
+                </h2>
+                <div className="yeonHuiRank">
+                    <div>
+                        <div className={"first"} id={"total1st"}>
+                            <RiNumber1 className={"numberIcon"}/>
+                            <h3 className={"storeName"}> 음식점 1 </h3>
+                            <div className={"storeType"}> 한식 </div>
+                            <div className={"dalPoint"}><IoMoon/> 3.5 </div>
+                            <div className={"img"}> <img/> </div>
+                        </div>
+                        <div className={"second"} id={"total2nd"}>
+                            <RiNumber2 className={"numberIcon"}/>
+                            <h3 className={"storeName"}> 음식점 1 </h3>
+                            <div className={"storeType"}> 한식 </div>
+                            <div className={"dalPoint"}><IoMoon/> 3.5 </div>
+                            <div className={"img"}> <img/> </div>
+                        </div>
+                        <div className={"third"} id={"total3rd"}>
+                            <RiNumber3 className={"numberIcon"}/>
+                            <h3 className={"storeName"}> 음식점 1 </h3>
+                            <div className={"storeType"}> 한식 </div>
+                            <div className={"dalPoint"}><IoMoon/> 3.5 </div>
+                            <div className={"img"}> <img/> </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
