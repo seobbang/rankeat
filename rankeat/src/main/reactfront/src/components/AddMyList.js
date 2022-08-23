@@ -68,10 +68,10 @@ const AddMyList = () => {
         
       <div className="myList">
 
-                  <DropdownButton id="dropdown-basic-button" title="내 리스트에 추가하기">
-                    <Dropdown.Item href="#/putMyList" onClick={handleClick}>List1</Dropdown.Item>
-                    <Dropdown.Divider />
-                    <Dropdown.Item href="#/createNewList" onClick={handleCreateList}>새 리스트 만들기</Dropdown.Item>
+                  <DropdownButton id="dropdown-basic-button" title="내 리스트에 추가" size='sm'>
+                      <Dropdown.Item  href="#/putMyList" onClick={handleClick}>List1</Dropdown.Item>
+                      <Dropdown.Divider />
+                      <Dropdown.Item  href="#/createNewList" onClick={handleCreateList}>새 리스트 만들기</Dropdown.Item>
                   </DropdownButton>
 
                     <Modal className='addListModal' isOpen={isClicked} onRequestClose={isClicked}>         
