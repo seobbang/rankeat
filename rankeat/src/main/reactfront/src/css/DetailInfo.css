@@ -17,11 +17,11 @@ button {
     margin: auto;
     text-align: center;
 
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 
     color : black;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -30,7 +30,7 @@ button {
 
 .detailInfo {
     display: flex;
-    width: 80%;
+    width: 70%;
     margin: auto;
 }
 
@@ -40,7 +40,7 @@ button {
 }
 
 #restaurantInfo {
-    padding-right: 20px;
+    padding-right: 25px;
     border-right: 3px solid rgba(223, 213, 213, 0.77);
 }
 
@@ -50,8 +50,8 @@ button {
     justify-content: space-around;
 
     border: 1px solid black;
-    width: 450px;
-    height: 250px;
+    width: 300px;
+    height: 170px;
 }
 
 #restaurantInfo .keywords,
@@ -65,7 +65,7 @@ button {
     margin-bottom: 30px;
     justify-content: space-around;
 
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     font-style: italic;
 
@@ -81,7 +81,8 @@ button {
     padding: 10px;
     flex-basis: 100%;
 
-    font-size: 15px;
+    font-size: 13px;
+    color: rgb(112, 103, 103);
 }
 
 
@@ -107,17 +108,17 @@ button {
 }
 
 .rating .assessment {
-    flex-basis: 50%;
+    flex-basis: 45%;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
 
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .moon_grade .moon {
-    width: 150px;
-    height: 200px;
+    width: 120px;
+    height: 150px;
     margin: auto;
 
     border: 1px solid black;
@@ -130,19 +131,19 @@ button {
 
 .rating .btn_reviewing {
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-bottom: 50px;
 }
 
 .btn_reviewing button {
-    width: 350px;
-    height: 60px;
+    width: 200px;
+    height: 40px;
     cursor: pointer;
     border-radius: 5px;
     background-color: rgba(255,51,51,0.77);
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 17px;
 
     box-shadow: 0 8px 16px 0 rgba(144, 137, 137, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
@@ -156,14 +157,14 @@ button {
 /* ViewReview.js */
 
 .viewReview {
-    width: 80%;
+    width: 70%;
     margin: auto;
     margin-top: 70px;
 }
 
 
 .viewReview .title {
-    font-size: 30px;
+    font-size: 27px;
     color: rgba(255,51,51,0.77);
     font-weight: bold;
 
@@ -180,6 +181,7 @@ button {
 }
 
 .reviewBox .nick {
+    font-size: 15px;
     flex-basis: 10%;
     margin: auto;
     text-align: center;
@@ -190,11 +192,13 @@ button {
 }
 
 .reviewBox .assessment {
+    font-size: 12px;
     flex-basis: 20%;
     padding-left: 20px;
 }
 
 .reviewBox .statement {
+    font-size: 12px;
     flex-basis: 70%;
 
     border: 2px solid rgba(223, 213, 213, 0.77);
@@ -304,13 +308,22 @@ button {
 
 .myList #dropdown-basic-button {
     background-color: white;
-    border: 3px solid rgba(255,51,51,0.77);
-    color: rgb(100, 98, 98);
-    
+    border: 2px solid rgba(255,51,51,0.77);
+    border-radius: 10px;
+    color: rgba(255,51,51,0.77);
+    /* color: rgb(100, 98, 98); */
+    width: 160px;
+    font-size: 13px;
+}
+
+#dropdown-basic-button .dropdownItem{
+    color: black;
+    border: 1px solid rgba(255,51,51,0.77);
+    width: 160px;
+    font-size: 10px;
 }
 
 .addListModal, .createListModal{
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -323,8 +336,8 @@ button {
     align-items: center;
     flex-wrap: wrap;
 
-    width: 400px;
-    height: 150px;
+    width: 300px;
+    height: 120px;
 
     background-color:rgb(255, 255, 255);
     border: 3px solid rgba(255,51,51,0.77);
@@ -336,13 +349,13 @@ button {
     justify-content: center;
     
     width:100%;
-    font-size: 20px;
+    font-size: 16px;
     color:  rgba(255,51,51,0.77);
 }
 
 .addListModal img {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 }
 
 .addListModal .content{
