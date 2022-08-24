@@ -13,7 +13,7 @@ function Login() {
                 <p><input type="text" placeholder="아이디" /></p>
                 <p> <input type="password" placeholder="비밀번호" /></p>
                 <div className='lobtn'>
-                    <button type="button" >로그인</button>
+                    <button onclick="save_order()" type="button" >로그인</button>
                 </div>
                 <div className="joinbtn">
                     <button type="button" >회원가입</button>
