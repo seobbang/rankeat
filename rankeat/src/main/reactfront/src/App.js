@@ -1,9 +1,11 @@
+import './App.css';
 import Home from "./pages/Home";
 import React, {useEffect, useState} from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import yeonHuiDummyData from "./data/yeonHui.json";
 import ewhaDummyData from "./data/ewha.json";
 import sinChonDummyData from "./data/sinChon.json";
+
 
 function App() {
     const yeonHuiData = yeonHuiDummyData.DATA.slice(0,499).filter((it) => it.dtlstatenm === "영업").slice(0,20).map((it) => {
