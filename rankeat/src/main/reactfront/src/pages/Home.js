@@ -5,6 +5,7 @@ import AppLayout from "./AppLayout";
 import { AiOutlineSearch } from "react-icons/ai"
 import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri"
 import { IoMoon } from "react-icons/io5"
+import SearchBar from "./SearchBar";
 
 const Home = () => {
     const [loginState, setLoginState] = useState(true);
@@ -12,7 +13,7 @@ const Home = () => {
     return (
         <div className="Home">
             <AppLayout loginState={loginState}/>
-
+            <SearchBar/>
             {/* 음식점 랭킹 */}
             <div className="rank">
                 <h2>

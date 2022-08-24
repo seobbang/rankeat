@@ -5,6 +5,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import yeonHuiDummyData from "./data/yeonHui.json";
 import ewhaDummyData from "./data/ewha.json";
 import sinChonDummyData from "./data/sinChon.json";
+import Login from "./pages/Login";
+import Join from "./pages/Join";
+import Myreview from "./pages/Myreview";
+import Personal from "./pages/Personal";
 
 function App() {
     const yeonHuiData = yeonHuiDummyData.DATA.slice(0,499).filter((it) => it.dtlstatenm === "영업").slice(0,20).map((it) => {
@@ -42,6 +46,10 @@ function App() {
             <div className={"App"}>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/Login" element={<Login />} />
+                    <Route path="/Join" element={<Join />} />
+                    <Route path="/Myreview" element={<Myreview />} />
+                    <Route path="/Personal" element={<Personal />} />
                     {/*<Route path={"/SearchListsCards"} element={<SearchListsCards/>}/>*/}
                     {/*<Route path='/DetailInfo' element={<DetailInfo/>}/>*/}
                     {/*<Route  path='/WriteReview' element={<WriteReview />}/>*/}
