@@ -1,4 +1,5 @@
 /* 업체 평점 */
+import React from "react";
 
 const Rating = () => {
     

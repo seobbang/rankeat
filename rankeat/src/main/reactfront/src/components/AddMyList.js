@@ -4,7 +4,8 @@ import Modal from 'react-modal';
 
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import AppLayout from "../pages/AppLayout";
 
 
 const AddMyList = () => {
@@ -29,9 +30,8 @@ const AddMyList = () => {
   const CreateList = () => {
 
     return (
-  
         <div className="createList">
-  
+
                 <div className="inputBox">
                         <div>리스트명</div>
                         <input></input>

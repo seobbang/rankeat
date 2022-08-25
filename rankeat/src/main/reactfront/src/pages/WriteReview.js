@@ -2,6 +2,7 @@
 import '../css/WriteReview.css'
 
 import React from "react";
+import AppLayout from "./AppLayout";
 
 const WriteReview = () => {
 
@@ -22,7 +23,10 @@ const WriteReview = () => {
     }
 
     return (
+        <>
+        <AppLayout/>
         <div className="writeReview">
+
             <div className="announcement">
                 <span>최근 __동안의 평가만 총 평점에 반영됩니다.</span>
             </div>
@@ -104,6 +108,7 @@ const WriteReview = () => {
             </div>
 
         </div>
+        </>
     );
 }
 

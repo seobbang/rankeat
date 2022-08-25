@@ -1,4 +1,5 @@
 /* 업체 정보 */
+import React from "react";
 
 const RestaurantInfo = () => {
 

@@ -40,8 +40,8 @@ const AppLayout = ({loginState}) => {
                     </div>
                     <div className="listMenu">
                         <h3>맛집 리스트</h3>
-                        <div><button id="myList" onClick={()=>{window.location.href="/Writepage"}}>내가 만든 맛집리스트</button></div>
-                        <div><button id="saveList" onClick={()=>{window.location.href="/FollowList"}}>내가 저장한 맛집 리스트</button></div>
+                        <div><button id="myList" onClick={()=>{window.location.href="/PostPage"}}>내가 만든 맛집리스트</button></div>
+                        <div><button id="saveList" onClick={()=>{window.location.href="/SavePage"}}>내가 저장한 맛집 리스트</button></div>
                     </div>
                     <div className="reviewMenu">
                         <h3>후기</h3>
