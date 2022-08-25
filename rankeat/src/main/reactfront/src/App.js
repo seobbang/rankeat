@@ -1,25 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+
+import TopBar from './components/TopBar'
+import DetailInfo from './pages/DetailInfo'
+import WriteReview from './pages/WriteReview'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import 'bootstrap/dist/css/bootstrap.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <BrowserRouter>
+        <div className='App'>
+
+          <TopBar/>
+
+          <div className='content'> 
+      
+              <Routes>
+                <Route path='/' element={<DetailInfo/>}/>
+                <Route  path='/WriteReview' element={<WriteReview />}/>
+              </Routes>
+
+          </div>  
+
+        </div>
+
+    </BrowserRouter>
   );
 }
 
 export default App;
+
