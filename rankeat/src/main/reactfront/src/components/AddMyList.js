@@ -6,16 +6,16 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { useState } from 'react';
 
+const AddMyList = (dt) => {
 
-const AddMyList = () => {
-
-  const [isClicked, setIsClicked] = useState(false);
+  const [successAdd, setSuccessAdd] = useState(false);
 
   function handleClick (e) {
 
-    setIsClicked(true);
 
-    setTimeout(() => {setIsClicked(false)}, 1000);
+    setSuccessAdd(true);
+
+    setTimeout(() => {setSuccessAdd(false)}, 1300);
 
    }
 
@@ -62,19 +62,22 @@ const AddMyList = () => {
         </div>       
     );
   }
+
   
 
     return (
         
       <div className="myList">
 
-                  <DropdownButton id="dropdown-basic-button" title="내 리스트에 추가" size='sm'>
-                      <Dropdown.Item  href="#/putMyList" onClick={handleClick}>List1</Dropdown.Item>
+                  <DropdownButton id="dropdown-basic-button" title="내 리스트에 추가" size='sm'>             
+                      <Dropdown.Item  href="#/putMyList" onClick={handleClick}>
+                        <div>리스트1</div>
+                      </Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item  href="#/createNewList" onClick={handleCreateList}>새 리스트 만들기</Dropdown.Item>
                   </DropdownButton>
 
-                    <Modal className='addListModal' isOpen={isClicked} onRequestClose={isClicked}>         
+                    <Modal className='addListModal' isOpen={successAdd} onRequestClose={successAdd}>         
                             <div className='content'>
                               <div>
                                 <img src={process.env.PUBLIC_URL + '/image/addListSuccess.gif'}/>
