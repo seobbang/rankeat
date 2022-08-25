@@ -58,7 +58,7 @@ function App() {
                     <Route path="/Personal" element={<Personal />} />
                     <Route path='/DetailInfo' element={<DetailInfo/>}/>
                     <Route  path='/WriteReview' element={<WriteReview />}/>
-                    {/*<Route path="/MainPage" element = {<MainPage/>}/>*/}
+                    {/*<Route path="/MainPage?:한식" element = {<MainPage/>}/>*/}
                     {/*/!*<Route path = "/ProductPage" element= {<ProductPage/>} />*!/*/}
                     {/*<Route path = "/SavePage" element={<SavePage />}/>*/}
                     {/*<Route path = "/PostPage" element={<PostPage/>}/>*/}

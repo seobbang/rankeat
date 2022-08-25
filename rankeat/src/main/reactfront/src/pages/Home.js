@@ -9,7 +9,10 @@ import SearchBar from "./SearchBar";
 
 const Home = () => {
     const [loginState, setLoginState] = useState(true);
-
+    const userId = sessionStorage.getItem('user_id');
+    if(userId !== null) {
+        setLoginState(true);
+    }
     return (
         <div className="Home">
             <AppLayout loginState={loginState}/>
