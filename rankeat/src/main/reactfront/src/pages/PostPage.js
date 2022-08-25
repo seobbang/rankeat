@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+/*import React, { useEffect } from "react";
 import { ReactDOM } from "react-dom";
 import {Route, Routes} from "react-router-dom";
 import axios from 'axios';
@@ -88,3 +88,4 @@ const PostPage=(props) =>{
 }
 
 export default PostPage();
+*/

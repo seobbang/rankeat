@@ -23,13 +23,24 @@ function Login() {
                 'user_pw': inputPw
             }
         })
-            .then(res =>
-            if(res.ok){
-                alert('로그인 완료');
-                history.pushState('/');
+            .then(res => {
+                if(res.data.userId === undefined){
+                    // id 일치하지 않는 경우 userId = undefined, msg = '입력하신 id 가 일치하지 않습니다.'
+                    alert('입력하신 전화번호가 일치하지 않습니다.')
+                } else if(res.data.userId === null){
+                    // id는 있지만, pw 는 다른 경우 userId = null , msg = undefined
+                    alert('입력하신 비밀번호 가 일치하지 않습니다.')
+                } else if(res.data.userId === inputId) {
+                    // id, pw 모두 일치 userId = userId1, msg = undefined
+                    alert('로그인 성공');
+                    sessionStorage.setItem('user_id', inputId)
+                }
+                // 작업 완료 되면 페이지 이동(새로고침)
+                document.location.href = '/'
             })
             .catch()
     }
+
 
     return (
         <main>

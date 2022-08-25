@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+/*import React, { useEffect } from "react";
 import { ReactDOM } from "react";
 import { Input } from "antd";
 import axios from 'axios';
@@ -61,5 +61,5 @@ function MainPage(props) {
 };
 
 
-export default MainPage;
+export default MainPage;*/
 
