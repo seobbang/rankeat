@@ -1,30 +1,20 @@
-import React from "react";
-import { ReactDOM } from "react";
-import MainPage from "./pages/MainPage";
-import './App.css';
 import Home from "./pages/Home";
-import  {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import yeonHuiDummyData from "./data/yeonHui.json";
 import ewhaDummyData from "./data/ewha.json";
 import sinChonDummyData from "./data/sinChon.json";
+
+import MainPage from "./pages/MainPage";
 import Login from "./pages/Login";
 import Join from "./pages/Join";
 import Myreview from "./pages/Myreview";
 import Personal from "./pages/Personal";
-
-/*
-const App = () => {
-  return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element = {<MainPage/>}/>
-        <Route path = "/products" element= {<ProductPage/>} />
-
-      </Routes>
-    </div>
-  );
-}*/
+import DetailInfo from "./pages/DetailInfo";
+import WriteReview from "./pages/WriteReview";
+// import ProductPage from "./pages/ProductPage";
+import SavePage from "./pages/SavePage";
+import PostPage from "./pages/PostPage";
 
 function App() {
     const yeonHuiData = yeonHuiDummyData.DATA.slice(0,499).filter((it) => it.dtlstatenm === "영업").slice(0,20).map((it) => {
