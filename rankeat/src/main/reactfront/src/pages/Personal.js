@@ -1,3 +1,4 @@
+import * as React from 'react';
 import './Personal.css'
 
 export default function Personal() {
