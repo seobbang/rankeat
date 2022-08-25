@@ -6,7 +6,6 @@ import { GrFormClose } from "react-icons/gr"
 
 const AppLayout = ({loginState}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [searchWhat, setSearchWhat] = useState("store"); //음식점 검색 or 맛집 리스트 검색
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -20,38 +19,6 @@ const AppLayout = ({loginState}) => {
                 <header>
                     <h1>RankEat</h1>
                 </header>
-            </div>
-
-            {/* 검색창 */}
-            <div className="search">
-                <div className="searchSelectBt">
-                    <button
-                        className={
-                            searchWhat === "store" ? "select" : "unselect"
-                        }
-                        id="storeSearch"
-                        onClick={() => setSearchWhat("store")}
-                    >
-                        음식점 검색
-                    </button>
-                    <button
-                        className={
-                            searchWhat === "list" ? "select" : "unselect"
-                        }
-                        id="listSearch"
-                        onClick={() => setSearchWhat("list")}
-                    >
-                        맛집 리스트 검색
-                    </button>
-                </div>
-                <div>
-                    <span className={"searchIcon"}>
-                        <AiOutlineSearch id={"searchIcon"}/>
-                    </span>
-                    <input id="searchBar" type="text"></input>
-                </div>
-
-
             </div>
 
             <div className={isMenuOpen ? "" : "hidden"}>

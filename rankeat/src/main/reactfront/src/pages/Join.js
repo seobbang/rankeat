@@ -1,13 +1,12 @@
 import * as React from 'react';
-import AppLayout
-import './Join.css';
+import '../css/Join.css';
+import AppLayout from "./AppLayout";
 
 
-function App() {
+function Join() {
     return (
         <main>
-
-            <AppLayout></AppLayout>
+            <AppLayout/>
             <div className="lobox">
                 <h2>회원가입</h2>
                 <p>ID: <input type="text" placeholder="이메일 입력" /></p>

@@ -1,12 +1,12 @@
 import * as React from 'react';
-import './Login.css';
-import AppLayout from "./AppLayout"
+import AppLayout from "./AppLayout";
+import '../css/Login.css';
 
 
 function Login() {
     return (
         <main>
-            <AppLayout></AppLayout>
+            <AppLayout/>
             <div className="lobox">
                 <h2>LOGIN</h2>
                 <p><input type="text" placeholder="아이디" /></p>

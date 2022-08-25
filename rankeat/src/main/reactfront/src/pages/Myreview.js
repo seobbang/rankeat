@@ -1,20 +1,14 @@
 import * as React from 'react';
-import './App.css';
 import Box from "./Box"
+import AppLayout from "./AppLayout";
 
 function Myreview() {
     return (
         <main>
-            <div className="header">
-                <header>
-                    <h1>RankEat</h1>
-                </header>
-            </div>
+            <AppLayout/>
             <Box/>
             <Box/>
             <Box/>
-
-
         </main>
     );
 }
