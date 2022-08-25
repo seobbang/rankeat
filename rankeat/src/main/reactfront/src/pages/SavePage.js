@@ -7,8 +7,15 @@ const {Option} = Select;
 
 
 const SavePage = () => {
-    const onChange=() =>{
+    const onChangeSinchon=() =>{
 
+    }
+
+    const onChangeDaehyeon=()=>{
+
+    }
+    const onChangeAhyeon=() =>{
+      
     }
 
     const [products, setProducts] = useState([]);
@@ -20,12 +27,14 @@ const SavePage = () => {
     },[])
 
     return (
+
+       
         <div class="drop-down-container">
             <div class="drop-down">
                <Select defaultValue={Sinchon} style = {{width: 120}}>
-                <Option value = "Sinchon" onChange = {onChange}>Sinchon</Option>
-                <Option value = "Daehyeon" onChange = {onChange}>Daehyeon</Option> 
-                <Option value = "Ahyeon">Ahyeon</Option>
+                <Option value = "Sinchon" onChange = {onChangeSinchon}>Sinchon</Option>
+                <Option value = "Daehyeon" onChange = {onChangeDaehyeon}>Daehyeon</Option> 
+                <Option value = "Ahyeon" onChange={onChangeAhyeon}>Ahyeon</Option>
                </Select>
             </div>
         </div>

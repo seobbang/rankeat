@@ -54,7 +54,7 @@ const PostPage=(props) =>{
     <div class = "product-list" className = 'inner'>
       <div id= "product-items">
         {products.map(product => (
-          <div className = ""
+          <div className = "product-card" key= {product.id}
         ))}
       </div>
     </div>
@@ -77,6 +77,7 @@ const PostPage=(props) =>{
   
   </div>
     <div class="Button"><Button>#가성비가 좋은</Button></div>
+    
 
     <div class="Button"><Button>#로맨틱한</Button></div>
 
