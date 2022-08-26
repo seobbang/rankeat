@@ -1,8 +1,16 @@
 import '../css/Personal.css'
-import React from "react";
+import React, {useState} from "react";
 import AppLayout from "./AppLayout";
 
-export default function Personal() {
+export default function Personal()
+    const [Nick, setNick] = useState('')
+
+    const onNickHandler = (e) => {
+        setNick(e.currentTarget.value)
+    }
+
+    const onChange = (e) => {
+          setNick({nickname:e.target.value});
     return (
 
         <main>
