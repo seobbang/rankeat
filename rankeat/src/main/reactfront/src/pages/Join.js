@@ -9,20 +9,43 @@ function Join() {
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
 
-    const onPhoneHandler = (event) => {
-        setPhone(event.currentTarget.value)
+    const onPhoneHandler = (e) => {
+        setPhone(e.currentTarget.value)
     }
-    const onNickHandler = (event) => {
-        setNick(event.currentTarget.value)
-    }
-
-    const onPasswordHandler = (event) => {
-        setPassword(event.currentTarget.value)
+    const onNickHandler = (e) => {
+        setNick(e.currentTarget.value)
     }
 
-    const onConfirmPasswordHandler = (event) => {
-        setConfirmPassword(event.currentTarget.value)
+    const onPasswordHandler = (e) => {
+        setPassword(e.currentTarget.value)
     }
+
+    const onConfirmPasswordHandler = (e) => {
+        setConfirmPassword(e.currentTarget.value)
+    }
+    handleJoin = () => {
+        fetch('API주소', {
+            method: 'POST',
+            body: JSON.stringify({
+                "phone" : "01012345678",
+                "password" : "password",
+                "email" : "email@rankeat.com",
+                "name" : "nickname"
+            }),
+        })
+            .then(response => response.json())
+            .then(response => {
+                if (response.message === '회원가입 성공') {
+                    return alert('회원가입 성공!');
+                } else if (response.message === '필수 데이터 누락') {
+                    alert('필수 정보를 모두 입력해주세요.');
+                } else if (response.message === '이미 존재하는 전화번호'){
+                    alert('이미 존재하는 번호입니다.');
+                } else if (response.message === '이미 존재하는 닉네임'){
+                    alert('이미 존재하는 닉네임입니다.');
+                }
+            });
+    };
 
     return (
         <main>
@@ -34,7 +57,10 @@ function Join() {
                 <p>password:  <input type="password" placeholder="비밀번호" value={password} onChange={onPasswordHandler}/></p>
                 <p>password: <input type="text" placeholder="비밀번호 확인" value={confirmPassword} onChange={onConfirmPasswordHandler} /></p>
                 <div className='lobtn'>
-                    <button onClick={()=>{window.location.href="/Home"}}  type="button" >가입하기</button>
+                    <button onClick={ () => {
+                        handleJoin()
+                        ()=>{window.location.href="/Login"}
+                    } } type="button" >가입하기</button>
                 </div>
 
             </div>

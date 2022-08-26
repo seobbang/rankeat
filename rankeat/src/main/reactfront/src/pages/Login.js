@@ -6,6 +6,7 @@ import axios from 'axios';
 function Login() {
     const [inputId, setInputId] = useState('')
     const [inputPw, setInputPw] = useState('')
+    const [isLogin, setisLogin] = useState('')
 
     const handleInputId = (e) => {
         setInputId(e.target.value)
@@ -15,30 +16,41 @@ function Login() {
         setInputPw(e.target.value)
     }
 
-    // login 버튼 클릭
-    const onClickLogin = () => {
-        axios.post('/user_inform/onLogin', null, {
-            params: {
-                'user_id': inputId,
-                'user_pw': inputPw
+    // login 버튼 클릭 시 서버로 데이터 전달
+    const onClickLogin = (e) => {
+        e.preventDefault();
+
+        const login_info = {
+            method: "POST",
+            body: JSON.stringify({
+                "phone" : "01012345678",
+                "password" : "password"
+            }),
+            headers: {
+                "Content-Type": "application/json"
             }
-        })
+        }
+        fetch("http://localhost:8080/login", login_info)
             .then(res => {
-                if(res.data.userId === undefined){
-                    // id 일치하지 않는 경우 userId = undefined, msg = '입력하신 id 가 일치하지 않습니다.'
-                    alert('입력하신 전화번호가 일치하지 않습니다.')
-                } else if(res.data.userId === null){
-                    // id는 있지만, pw 는 다른 경우 userId = null , msg = undefined
-                    alert('입력하신 비밀번호 가 일치하지 않습니다.')
-                } else if(res.data.userId === inputId) {
-                    // id, pw 모두 일치 userId = userId1, msg = undefined
-                    alert('로그인 성공');
-                    sessionStorage.setItem('user_id', inputId)
-                }
-                // 작업 완료 되면 페이지 이동(새로고침)
-                document.location.href = '/'
+                return res.json();
             })
-            .catch()
+            .then(json => {
+                if (json.success === true) {
+                    alert("로그인되었습니다");
+                    // 서버로 부터 받은 JSON데이터를 로컬스토리지에 우선 저장
+                    window.localStorage.setItem('userInfo', JSON.stringify(json))
+                    //스테이트에 유저정보를 저장
+                    setState({
+                        inputId: json.inputId,
+                        inputPw: json.inputPw,
+                        isLogin: json.success
+                    });
+                    this.props.history.push("/Home")
+                } else {
+                    alert("아이디 혹은 비밀번호를 확인하세요");
+                }
+            });
+    };
     }
 
 
