@@ -17,7 +17,7 @@ const AppLayout = ({loginState}) => {
             <div className="header">
                 <button className="openMenu" onClick={() => toggleMenu()}><AiOutlineMenu id={"openMenu"}/></button>
                 <header>
-                    <h1>RankEat</h1>
+                    <h1 onClick={()=>{window.location.href="/"}}>RankEat</h1>
                 </header>
             </div>
 
@@ -47,9 +47,15 @@ const AppLayout = ({loginState}) => {
                         <h3>후기</h3>
                         <div><button id="myReview" onClick={()=>{window.location.href="/Join"}}>내가 쓴 후기</button></div>
                     </div>
-                    <div className="editMyInfo">
-                        <button id="editMyInfo" onClick={()=>{window.location.href="/Personal"}}><MdSettings id={"editMyInfoIcon"}/> 개인정보 수정</button>
-                    </div>
+                    <div className="editOrLogout">
+                        <MdSettings id={"editMyInfoIcon"}/>
+                        <button id="editMyInfo" onClick={()=>{window.location.href="/Personal"}}> 개인정보 수정</button>
+                        <button id="logOut" onClick={()=>{
+                            if (window.confirm("로그아웃 하시겠습니까?")) {
+                                sessionStorage.setItem('user_id', null);
+                            }
+                        }}> 로그아웃</button>
+                    </div>`
 
                 </div>
 

@@ -9,10 +9,12 @@ import SearchBar from "./SearchBar";
 
 const Home = () => {
     const [loginState, setLoginState] = useState(true);
+    // 로그인 사용자 id 받아오기
     const userId = sessionStorage.getItem('user_id');
     if(userId !== null) {
         setLoginState(true);
     }
+
     return (
         <div className="Home">
             <AppLayout loginState={loginState}/>

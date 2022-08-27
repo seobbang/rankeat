@@ -16,6 +16,7 @@ header {
 
 header h1 {
     font-size: 30px;
+    cursor: pointer;
 }
 
 .openMenu {
@@ -207,9 +208,11 @@ header h1 {
     height: 110px;
 }
 
-.editMyInfo {
+.editOrLogout{
     position: relative;
+    left: 17px;
     top: 30%;
+    height: 30px;
 }
 
 .sidebarAfterLogin h3 {
@@ -235,21 +238,30 @@ header h1 {
 }
 
 #editMyInfo {
-    position: absolute;
-    left: 15px;
     border: none;
     background-color: rgb(224, 224, 224);
     font-size: 15px;
     cursor: pointer;
+    border-right: solid 1px black;
+    width: 135px;
 }
 
-#editMyInfo:hover {
+#logOut {
+    border: none;
+    background-color: rgb(224, 224, 224);
+    font-size: 15px;
+    cursor: pointer;
+    width: 100px;
+}
+
+#editMyInfo:hover, #logOut:hover {
     font-weight: bold;
 }
 
 #editMyInfoIcon {
     position: relative;
+    left: 13px;
+    top: 4px;
     width:20px;
     height:20px;
-    top: 4px;
 }
