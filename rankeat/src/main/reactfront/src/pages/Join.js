@@ -32,6 +32,9 @@ function Join() {
                 "email" : "email@rankeat.com",
                 "name" : "nickname"
             }),
+            headers: {
+                "Content-Type": "application/json"
+            }
         })
             .then(response => response.json())
             .then(response => {
