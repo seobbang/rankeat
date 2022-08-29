@@ -5,7 +5,7 @@ import yeonHuiDummyData from "./data/yeonHui.json";
 import ewhaDummyData from "./data/ewha.json";
 import sinChonDummyData from "./data/sinChon.json";
 
-import MainPage from "./pages/MainPage";
+// import MainPage from "./pages/MainPage";
 import Login from "./pages/Login";
 import Join from "./pages/Join";
 import Myreview from "./pages/Myreview";
@@ -13,8 +13,8 @@ import Personal from "./pages/Personal";
 import DetailInfo from "./pages/DetailInfo";
 import WriteReview from "./pages/WriteReview";
 // import ProductPage from "./pages/ProductPage";
-import SavePage from "./pages/SavePage";
-import PostPage from "./pages/PostPage";
+// import SavePage from "./pages/SavePage";
+// import PostPage from "./pages/PostPage";
 
 function App() {
     const yeonHuiData = yeonHuiDummyData.DATA.slice(0,499).filter((it) => it.dtlstatenm === "영업").slice(0,20).map((it) => {

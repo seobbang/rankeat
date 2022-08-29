@@ -5,55 +5,51 @@ const SearchBar = () => {
     const [searchWhat, setSearchWhat] = useState("store"); //음식점 검색 or 맛집 리스트 검색
 
     const handleSearchWhat = (e) => {
-        if(e.key=="Enter"){
-            if(searchWhat === "store"){
-                // sessionStorage.setItem('storeSearch')
-                window.location.href="/MainPage"
-            } else if(searchWhat === "list") {
-                // sessionStorage.setItem('listSearch')
-                window.location.href="/PostPage"
-            }
+        if(searchWhat === "store"){
+            // window.location.href="/MainPage/:";
+        } else if(searchWhat === "list") {
+            sessionStorage.setItem('listSearch', searchWord.value);
+            // window.location.href="/PostPage";
         }
-
     }
 
-    const searchWord = "";
+const searchWord = "";
 
-    return (
-        <div className={"SearchBar"}>
-            {/* 검색창 */}
-            <div className="search">
-                <div className="searchSelectBt">
-                    <button
-                        className={
-                            searchWhat === "store" ? "select" : "unselect"
-                        }
-                        id="storeSearch"
-                        onClick={() => setSearchWhat("store")}
-                    >
-                        음식점 검색
-                    </button>
-                    <button
-                        className={
-                            searchWhat === "list" ? "select" : "unselect"
-                        }
-                        id="listSearch"
-                        onClick={() => setSearchWhat("list")}
-                    >
-                        맛집 리스트 검색
-                    </button>
-                </div>
-                <div>
+return (
+    <div className={"SearchBar"}>
+        {/* 검색창 */}
+        <div className="search">
+            <div className="searchSelectBt">
+                <button
+                    className={
+                        searchWhat === "store" ? "select" : "unselect"
+                    }
+                    id="storeSearch"
+                    onClick={() => setSearchWhat("store")}
+                >
+                    음식점 검색
+                </button>
+                <button
+                    className={
+                        searchWhat === "list" ? "select" : "unselect"
+                    }
+                    id="listSearch"
+                    onClick={() => setSearchWhat("list")}
+                >
+                    맛집 리스트 검색
+                </button>
+            </div>
+            <div>
                     <span className={"searchIcon"}>
                         <AiOutlineSearch id={"searchIcon"}/>
                     </span>
-                    <input type="text" id="searchBar" onKeyUp={handleSearchWhat}></input>
-                </div>
-
-
+                <input type="text" id="searchBar" name="searchWord" onKeyUp={(e)=>{if(e.key=="Enter")handleSearchWhat()}}></input>
             </div>
+
+
         </div>
-    )
+    </div>
+)
 
 }
 
