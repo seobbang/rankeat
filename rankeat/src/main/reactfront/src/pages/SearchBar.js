@@ -4,11 +4,11 @@ import React, {useState} from "react";
 const SearchBar = () => {
     const [searchWhat, setSearchWhat] = useState("store"); //음식점 검색 or 맛집 리스트 검색
 
-    const handleSearchWhat = (e) => {
+    const handleSearchWhat = (value) => {
         if(searchWhat === "store"){
-            window.location.href=`/Main?word=${searchWord.value}`;
+            window.location.href=`/Main?word=${value}`;
         } else if(searchWhat === "list") {
-            window.location.href=`/Postpage?word=${searchWord.value}`;
+            window.location.href=`/Postpage?word=${value}`;
         }
     }
 
@@ -42,7 +42,7 @@ return (
                     <span className={"searchIcon"}>
                         <AiOutlineSearch id={"searchIcon"}/>
                     </span>
-                <input type="text" id="searchBar" name="searchWord" onKeyUp={(e)=>{if(e.key=="Enter")handleSearchWhat()}}></input>
+                <input type="text" id="searchBar" name="searchWord" onKeyUp={(e)=>{if(e.key=="Enter")handleSearchWhat(e.target.value)}}></input>
             </div>
 
 
