@@ -30,7 +30,7 @@ function Login() {
                 "Content-Type": "application/json"
             }
         }
-        fetch("http://localhost:8080/login", login_info)
+        fetch("http://localhost:8080/login")
             .then(response => {
                 return response.json();
             })
