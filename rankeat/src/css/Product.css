@@ -1,0 +1,41 @@
+.product-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-items: center;
+  justify-content: center;
+
+}
+
+
+.product {
+  width: 25%;
+  height: 100%;
+  margin-bottom: 4%;
+  background-color: gray;
+  margin-left: 2%;
+  color: aliceblue;
+}
+
+.product_img {
+  max-width: 95%;
+  max-height: 100%;
+  justify-self: center;
+}
+
+.product_name {
+  margin-bottom: 10%;
+  font-size: larger;
+}
+
+#followbtn{
+  background-color: crimson;
+}
+
+button {
+  background-color: crimson;
+  border-color: crimson;
+  color:ghostwhite;
+  border-radius: 5%;
+}

@@ -1,0 +1,20 @@
+.followbtn {
+  margin-bottom: 20px;
+  
+  
+}
+
+#btn {
+  padding-top: 30px;
+  justify-self: center;
+  justify-items: center;
+}
+.followlist {
+  margin-bottom : 40px;
+}
+
+.followbtn > button {
+  border-radius : 4rem;
+  font-size :larger
+  
+} 
