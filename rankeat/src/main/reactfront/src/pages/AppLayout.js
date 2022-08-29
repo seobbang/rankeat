@@ -1,8 +1,9 @@
 import '../css/AppLayout.css';
 import React, {useState} from "react";
 import { MdSettings } from "react-icons/md"
-import {AiOutlineMenu, AiOutlineClose, AiOutlineSearch} from "react-icons/ai"
+import {AiOutlineMenu} from "react-icons/ai"
 import { GrFormClose } from "react-icons/gr"
+import { HiUserCircle } from "react-icons/hi"
 
 const AppLayout = ({loginState}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ const AppLayout = ({loginState}) => {
         <div>
             {/* 상단바 */}
             <div className="header">
-                <button className="openMenu" onClick={() => toggleMenu()}><AiOutlineMenu id={"openMenu"}/></button>
+                <button className="openMenu" onClick={() => toggleMenu()}><AiOutlineMenu id={"menuIcon"}/></button>
                 <header>
                     <h1 onClick={()=>{window.location.href="/"}}>RankEat</h1>
                 </header>
@@ -35,7 +36,7 @@ const AppLayout = ({loginState}) => {
                 <div className={"sidebarAfterLogin " + (loginState ? '' : 'hidden')}>
                     <button className="exit" onClick={() => toggleMenu()}><GrFormClose id={"exit"}/></button>
                     <div className="profile">
-                        <div>이미지</div>
+                        <HiUserCircle  id={"userIcon"}/>
                         <h4>OOO 님</h4>
                     </div>
                     <div className="listMenu">

@@ -1,6 +1,6 @@
 /* 메인 페이지 */
 import '../css/Home.css';
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import AppLayout from "./AppLayout";
 import { AiOutlineSearch } from "react-icons/ai"
 import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri"
@@ -10,10 +10,29 @@ import SearchBar from "./SearchBar";
 const Home = () => {
     const [loginState, setLoginState] = useState(true);
     // 로그인 사용자 id 받아오기
-    const userId = sessionStorage.getItem('user_id');
+    const userId = window.localStorage.getItem('id');
+    const nickName = window.localStorage.getItem('nickname');
     if(userId !== null) {
         setLoginState(true);
     }
+
+    // const getData = async () => {
+    //     const res = await fetch(
+    //         "https:/localhost:8080/main")
+    //         .then((res) => res.json())
+    //         .then((res) => {
+    //             console.log(res);
+    //         })
+    // };
+    //
+    // useEffect(() => {
+    //     getData();
+    // }, []);
+
+    const totalRank = null;
+    const ewhaRank = null;
+    const sinChonRank = null;
+    const yeonHuiRank = null;
 
     return (
         <div className="Home">
