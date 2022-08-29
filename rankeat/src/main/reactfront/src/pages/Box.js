@@ -10,8 +10,7 @@ function Box(){
             headers: {
                 "Content-Type": "application/json"
             }
-        }
-            fetch("http://localhost:8080/login", {method: 'GET'})
+            fetch("http://localhost:8080/review/list/:userIdx", {method: 'GET'})
                 .then(res => res.json())
                 .then(data => {
                     setPosts(data)
