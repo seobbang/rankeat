@@ -7,6 +7,10 @@ function Box(){
         const [posts, setPosts] = useState([])
 
         useEffect(() => {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }
             fetch("http://localhost:8080/login", {method: 'GET'})
                 .then(res => res.json())
                 .then(data => {
