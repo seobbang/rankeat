@@ -8,7 +8,7 @@ import Myreview from "./pages/Myreview";
 import Personal from "./pages/Personal";
 import DetailInfo from "./pages/DetailInfo";
 import WriteReview from "./pages/WriteReview";
-import Main from "./pages/Main";
+import MainPage from "./pages/MainPage";
 import Product from "./pages/Product";
 import Savepage from "./pages/Savepage";
 import Postpage from "./pages/Postpage";
@@ -27,7 +27,7 @@ function App() {
                     <Route path="/Personal" element={<Personal />} />
                     <Route path='/DetailInfo' element={<DetailInfo loginState={{loginState}}/>}/>
                     <Route  path='/WriteReview' element={<WriteReview />}/>
-                    <Route path="/Main" element = {<Main/>}/>
+                    <Route path="/MainPage" element = {<MainPage/>}/>
                     <Route path = "/Product" element= {<Product/>} />
                     <Route path = "/Savepage" element={<Savepage />}/>
                     <Route path = "/Postpage" element={<Postpage/>}/>

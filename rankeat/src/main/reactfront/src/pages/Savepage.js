@@ -6,13 +6,13 @@ import AppLayout from "./AppLayout";
 
 const Savepage=()=>{
 
-  return(
+    return(
 
 
-      <>
-        <AppLayout/>
-        <DropDown />
-        <div className="savepage_row"><Product /><Product /></div><div className="savepage_row"><Product /><Product /></div><div className="savepage_row"><Product /></div></>
-  )
+        <>
+            <AppLayout/>
+            <DropDown />
+            <div className="savepage_row"><Product /><Product /></div><div className="savepage_row"><Product /><Product /></div><div className="savepage_row"><Product /></div></>
+    )
 }
 export default Savepage;

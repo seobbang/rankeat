@@ -40,12 +40,12 @@ function Personal() {
     };
 
      */
-return (
+    return (
 
-            <div>
-                <AppLayout/>
-                <div className='minibox'>
-                    개인정보수정
+        <div>
+            <AppLayout/>
+            <div className='minibox'>
+                개인정보수정
                 <div className='nick'>
                     <p>닉네임</p>
                     <p><input type="text" placeholder="새로운 닉네임 입력" /></p>
@@ -55,7 +55,8 @@ return (
                     alert('수정되었습니다.');
                 }}  type="button" >수정하기</button>
             </div>
-
-        </main>
+        </div>
     )
 }
+
+export default Personal;
