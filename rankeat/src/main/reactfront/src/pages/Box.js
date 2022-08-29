@@ -1,7 +1,9 @@
-import React from 'react';
-import axios from 'axios';
+import * as React from 'react';
+
 
 function Box(){
+    /*
+}
     const Fetch = () => {
 
         const [posts, setPosts] = useState([])
@@ -16,10 +18,11 @@ function Box(){
                     setPosts(data)
                 })
         },[])
-
+*/
     return(
         <div className="box">
             <div className="pic">
+                {/*
                 <div className="dis">
                     가격:{posts.price}<br></br>웨이팅:{posts.waiting}<br></br>
                     맛:{posts.taste}<br></br>위생:{posts.clean}<br></br>서비스:{posts.service}
@@ -35,15 +38,17 @@ function Box(){
                 {posts.tag2}</div>
             <div className="tag">
                 {posts.tag3} </div>
+            */}
 
             <div className="tebox"> </div>
             <span class="material-symbols-outlined">
              delete
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </span>
         </div>
-
-
+        </div>
     )
 }
-export default Box
+    export default Box;
+
