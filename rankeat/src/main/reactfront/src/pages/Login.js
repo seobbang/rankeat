@@ -31,14 +31,15 @@ function Login() {
             }
         }
         fetch("http://localhost:8080/login", login_info)
-            .then(res => {
-                return res.json();
+            .then(response => {
+                return response.json();
             })
             .then(json => {
                 if (json.success === true) {
                     alert("로그인되었습니다");
                     // 서버로 부터 받은 JSON데이터를 로컬스토리지에 우선 저장
-                    window.localStorage.setItem('userInfo', JSON.stringify(json))
+                    window.localStorage.setItem('id', inputId);
+                    window.localStorage.setItem('nickname', JSON.stringify(json).nickname);
                     //스테이트에 유저정보를 저장
                     setState({
                         inputId: json.inputId,
