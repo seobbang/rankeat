@@ -24,7 +24,7 @@ function Join() {
         setConfirmPassword(e.currentTarget.value)
     }
     handleJoin = () => {
-        fetch('API주소', {
+        fetch('http://localhost:8080/user/join', {
             method: 'POST',
             body: JSON.stringify({
                 "phone" : "01012345678",
