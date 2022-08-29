@@ -1,6 +1,21 @@
 import React from 'react';
+import axios from 'axios';
 
 function Box(){
+
+    function searchApi() {
+        const url = "http://localhost:8080/login";
+        axios.get(url)
+            .then(function(response) {
+                setPhotos(response.data);
+                console.log("성공");
+            })
+            .catch(function(error) {
+                console.log("실패");
+            })
+
+    }
+
     return(
         <div className="box">
             <div className="pic">
@@ -19,7 +34,6 @@ function Box(){
 
             <div className="tebox"> </div>
             <span class="material-symbols-outlined">
-        edit
         delete
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </span>
