@@ -54,20 +54,15 @@ function Login() {
     };
     }
 
-
     return (
         <main>
             <AppLayout/>
             <div className="lobox">
                 <h2>LOGIN</h2>
-                <p><input type="text" placeholder="아이디" onChange={handleInputId} /></p>
-                <p> <input type="password" placeholder="비밀번호" onChange={handleInputPw} /></p>
-                <div className='lobtn'>
-                    <button onClick={onClickLogin} type="button" >로그인</button>
-                </div>
-                <div className="joinbtn">
-                    <button onClick={()=>{window.location.href="/Join"}} type="button" >회원가입</button>
-                </div>
+                <p><input type="text" placeholder="전화번호" onChange={handleInputId} /></p>
+                <p><input type="password" placeholder="비밀번호" onChange={handleInputPw} /></p>
+                <button onClick={onClickLogin} className='lobtn' type="button" >로그인</button>
+                <button onClick={()=>{window.location.href="/Join"}} className="joinbtn" type="button" >회원가입</button>
             </div>
         </main>
     );
