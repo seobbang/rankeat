@@ -33,6 +33,7 @@ export default function Personal()
                         alert('이미 존재하는 닉네임입니다.');
                     }
                 });
+            setNick(e.currentTarget.value)
         };
 
     return (
@@ -52,7 +53,8 @@ export default function Personal()
                 </div>
                 <div className='nick'>
                     <p>닉네임</p>
-                    <p><input type="text" placeholder="새로운 닉네임 입력" onChange={onNickHandler} /></p
+                    <p><input type="text" placeholder="새로운 닉네임 입력" onChange={onNickHandler}
+                    /></p
                 </div>
 
                 <button onClick={UpdateNick}  type="button" >수정하기</button>
