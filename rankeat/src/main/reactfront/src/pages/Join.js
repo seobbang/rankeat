@@ -36,7 +36,7 @@ function Join() {
                 "Content-Type": "application/json"
             }
         })
-            .then(response => response.json())
+            .then(response=> response.json())
             .then(response => {
                 if (response.message === '회원가입 성공') {
                     return alert('회원가입 성공!');
@@ -55,7 +55,7 @@ function Join() {
             <AppLayout/>
             <div className="lobox">
                 <h2>회원가입</h2>
-                <p>ID: <input type="text" placeholder="전화번호 입력" value={phone} onChange={onPhoneHandler}/></p>
+                <p>전화번호: <input type="text" placeholder="전화번호 입력" value={phone} onChange={onPhoneHandler}/></p>
                 <p>닉네임: <input type="text" placeholder="닉네임 입력" value={nick} onChange={onNickHandler} /></p>
                 <p>password:  <input type="password" placeholder="비밀번호" value={password} onChange={onPasswordHandler}/></p>
                 <p>password: <input type="text" placeholder="비밀번호 확인" value={confirmPassword} onChange={onConfirmPasswordHandler} /></p>
