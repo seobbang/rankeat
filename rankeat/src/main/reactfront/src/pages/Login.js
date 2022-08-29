@@ -16,15 +16,13 @@ function Login() {
         setInputPw(e.target.value)
     }
 
-    // login 버튼 클릭 시 서버로 데이터 전달
     const onClickLogin = (e) => {
         e.preventDefault();
-
         const login_info = {
             method: "POST",
             body: JSON.stringify({
-                "phone" : "01012345678",
-                "password" : "password"
+                "phone": "01012345678",
+                "password": "password"
             }),
             headers: {
                 "Content-Type": "application/json"
@@ -41,31 +39,33 @@ function Login() {
                     window.localStorage.setItem('id', inputId);
                     window.localStorage.setItem('nickname', JSON.stringify(json).nickname);
                     //스테이트에 유저정보를 저장
-                    setState({
-                        inputId: json.inputId,
-                        inputPw: json.inputPw,
-                        isLogin: json.success
-                    });
+                    setInputId(json.inputId);
+                    setInputPw(json.inputPw);
+
                     this.props.history.push("/Home")
                 } else {
                     alert("아이디 혹은 비밀번호를 확인하세요");
                 }
             });
     };
-    }
+
 
     return (
         <main>
             <AppLayout/>
             <div className="lobox">
                 <h2>LOGIN</h2>
-                <p><input type="text" placeholder="전화번호" onChange={handleInputId} /></p>
-                <p><input type="password" placeholder="비밀번호" onChange={handleInputPw} /></p>
-                <button onClick={onClickLogin} className='lobtn' type="button" >로그인</button>
-                <button onClick={()=>{window.location.href="/Join"}} className="joinbtn" type="button" >회원가입</button>
+                <p><input type="text" placeholder="전화번호" onChange={handleInputId}/></p>
+                <p><input type="password" placeholder="비밀번호" onChange={handleInputPw}/></p>
+                <button onClick={onClickLogin} className='lobtn' type="button">로그인</button>
+                <button onClick={() => {
+                    window.location.href = "/Join"
+                }} className="joinbtn" type="button">회원가입
+                </button>
             </div>
         </main>
     );
 }
+
 
 export default Login;
