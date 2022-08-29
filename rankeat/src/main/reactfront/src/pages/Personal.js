@@ -13,7 +13,7 @@ export default function Personal()
           setNick({nickname:e.target.value});
 
         UpdateNick = () => {
-            fetch('API주소', {
+            fetch("http://localhost:8080/user/modify", {
                 method: 'POST',
                 body: JSON.stringify({
                     "phone" : "01012345678",
@@ -26,6 +26,7 @@ export default function Personal()
                 .then(response => response.json())
                 .then(response => {
                     if (response.message === '닉네임 수정 성공') {
+                        setNick(e.currentTarget.value)
                         return alert('변경되었습니다.');
                     } else if (response.message === '필수 데이터 누락') {
                         alert('필수 정보를 모두 입력해주세요.');
@@ -33,7 +34,7 @@ export default function Personal()
                         alert('이미 존재하는 닉네임입니다.');
                     }
                 });
-            setNick(e.currentTarget.value)
+
         };
 
     return (
