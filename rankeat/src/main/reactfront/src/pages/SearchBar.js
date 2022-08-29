@@ -6,10 +6,9 @@ const SearchBar = () => {
 
     const handleSearchWhat = (e) => {
         if(searchWhat === "store"){
-            // window.location.href="/MainPage/:";
+            window.location.href=`/Main?word=${searchWord.value}`;
         } else if(searchWhat === "list") {
-            sessionStorage.setItem('listSearch', searchWord.value);
-            // window.location.href="/PostPage";
+            window.location.href=`/Postpage?word=${searchWord.value}`;
         }
     }
 

@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import CancelProduct from "./CancelProduct";
 import "../css/Postpage.css";
 
