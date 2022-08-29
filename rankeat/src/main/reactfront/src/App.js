@@ -56,13 +56,11 @@ function App() {
                     <Route path="/Join" element={<Join />} />
                     <Route path="/Myreview" element={<Myreview />} />
                     <Route path="/Personal" element={<Personal />} />
-                    <Route path='/DetailInfo' element={<DetailInfo/>}/>
-                    <Route  path='/WriteReview' element={<WriteReview />}/>
-                    {/*<Route path="/MainPage" element = {<MainPage/>}/>*/}
-                    {/*/!*<Route path = "/ProductPage" element= {<ProductPage/>} />*!/*/}
-                    {/*<Route path = "/SavePage" element={<SavePage />}/>*/}
-                    {/*<Route path = "/PostPage" element={<PostPage/>}/>*/}
+                    {/*<Route path={"/SearchListsCards"} element={<SearchListsCards/>}/>*/}
+                    {/*<Route path='/DetailInfo' element={<DetailInfo/>}/>*/}
+                    {/*<Route  path='/WriteReview' element={<WriteReview />}/>*/}
                 </Routes>
+
             </div>
         </BrowserRouter>
     );

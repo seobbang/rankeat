@@ -8,6 +8,8 @@
 
 }
 .lobtn{
+    width:170px;
+    height:27px;
     margin-top:80px;
     margin-right:60px;
     margin-left:60px;
@@ -19,7 +21,9 @@
     line-height: 0.2;
 }
 .joinbtn{
-    margin-top:10px;
+    width:170px;
+    height:27px;
+    margin-top:20px;
     margin-right:60px;
     margin-left:60px;
     background:rgb(224, 224, 224);
