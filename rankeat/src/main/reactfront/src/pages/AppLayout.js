@@ -5,8 +5,15 @@ import {AiOutlineMenu} from "react-icons/ai"
 import { GrFormClose } from "react-icons/gr"
 import { HiUserCircle } from "react-icons/hi"
 
-const AppLayout = ({loginState}) => {
+const AppLayout = ({loginState, setLoginState}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    // 로그인 사용자 id 받아오기
+    const userId = window.localStorage.getItem('id');
+    const nickName = window.localStorage.getItem('nickname');
+    if(userId !== null) {
+        setLoginState(true);
+    }
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -37,7 +44,7 @@ const AppLayout = ({loginState}) => {
                     <button className="exit" onClick={() => toggleMenu()}><GrFormClose id={"exit"}/></button>
                     <div className="profile">
                         <HiUserCircle  id={"userIcon"}/>
-                        <h4>OOO 님</h4>
+                        <h4>{nickName} 님</h4>
                     </div>
                     <div className="listMenu">
                         <h3>맛집 리스트</h3>
@@ -46,13 +53,14 @@ const AppLayout = ({loginState}) => {
                     </div>
                     <div className="reviewMenu">
                         <h3>후기</h3>
-                        <div><button id="myReview" onClick={()=>{window.location.href="/Join"}}>내가 쓴 후기</button></div>
+                        <div><button id="myReview" onClick={()=>{window.location.href="/Myreview"}}>내가 쓴 후기</button></div>
                     </div>
                     <div className="editOrLogout">
                         <MdSettings id={"editMyInfoIcon"}/>
                         <button id="editMyInfo" onClick={()=>{window.location.href="/Personal"}}> 개인정보 수정</button>
                         <button id="logOut" onClick={()=>{
                             if (window.confirm("로그아웃 하시겠습니까?")) {
+                                setLoginState(false);
                                 sessionStorage.setItem('user_id', null);
                             }
                         }}> 로그아웃</button>

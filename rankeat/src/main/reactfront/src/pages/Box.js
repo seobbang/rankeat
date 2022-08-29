@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/Box.css';
 
 function Box(){
     return(

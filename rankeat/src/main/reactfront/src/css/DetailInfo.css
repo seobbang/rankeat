@@ -1,7 +1,6 @@
 body {
     justify-content: center;  
-    align-items: center;      
-    font-family: 'Nanum Pen Script';    
+    align-items: center;
     min-height: 100vh;   
     margin: 0;
 }
@@ -314,6 +313,10 @@ button {
     /* color: rgb(100, 98, 98); */
     width: 160px;
     font-size: 13px;
+}
+
+#myListDropdown,#createListDropdown {
+    font-size: 15px;
 }
 
 #dropdown-basic-button .dropdownItem{
