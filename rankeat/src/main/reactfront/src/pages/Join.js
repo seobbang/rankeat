@@ -23,7 +23,7 @@ function Join() {
     const onConfirmPasswordHandler = (e) => {
         setConfirmPassword(e.currentTarget.value)
     }
-    handleJoin = () => {
+    const handleJoin = () => {
         fetch('http://localhost:8080/user/join', {
             method: 'POST',
             body: JSON.stringify({
@@ -59,12 +59,10 @@ function Join() {
                 <p>닉네임: <input type="text" placeholder="닉네임 입력" value={nick} onChange={onNickHandler} /></p>
                 <p>password:  <input type="password" placeholder="비밀번호" value={password} onChange={onPasswordHandler}/></p>
                 <p>password: <input type="text" placeholder="비밀번호 확인" value={confirmPassword} onChange={onConfirmPasswordHandler} /></p>
-                <div className='lobtn'>
                     <button onClick={ () => {
                         handleJoin()
-                        ()=>{window.location.href="/Login"}
-                    } } type="button" >가입하기</button>
-                </div>
+                        {window.location.href="/Login"};
+                    } } className='lobtn' type="button" >가입하기</button>
 
             </div>
         </main>
