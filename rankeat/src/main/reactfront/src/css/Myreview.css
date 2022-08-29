@@ -13,9 +13,7 @@
     width:800px;
     background-color:white;
 }
-header h1 {
-    font-size: 30px;
-}
+
 .box{
     border: 1.5px solid rgba(255, 51, 51, 0.77);
     height: 150px;
