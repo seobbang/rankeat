@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Box from './Box';
-import '../css/Myreview.css'
+import '../css/Box.css'
 import AppLayout from './AppLayout';
 
 function Myreview() {
