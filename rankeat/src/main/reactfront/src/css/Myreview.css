@@ -2,6 +2,8 @@
     background-color: rgb(224, 224, 224);
     width:1000px;
     height:120px;
+    position:absolute;
+    left:50%;
 }
 
 .textbox{
