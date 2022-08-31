@@ -59,10 +59,10 @@ input[type=radio],input[type=checkbox] {
     border: none;
     border-radius: 3px;
     width: 80px;
-    height: 25px;
+    height: 18px;
 
     color: white;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .item input[type=radio]+label:hover {
@@ -97,8 +97,8 @@ input[type="radio"]:checked+label {
     background-color: rgb(187, 185, 185);
     border: none;
     border-radius: 30px;
-    width: 40px;
-    height: 30px;
+    width: 30px;
+    height: 20px;
 
     color: rgb(69, 69, 69);
     font-size: 13px;

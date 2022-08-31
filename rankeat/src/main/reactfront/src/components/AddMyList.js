@@ -1,4 +1,5 @@
 /* 내 맛집 리스트 드롭다운 메뉴 */
+import React from 'react'
 
 import Modal from 'react-modal';
 import Dropdown from 'react-bootstrap/Dropdown';

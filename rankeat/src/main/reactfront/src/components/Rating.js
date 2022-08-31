@@ -1,4 +1,6 @@
 /* 업체 평점 */
+import React from 'react'
+
 import {WiMoonWaxingCrescent2, WiMoonWaxingCrescent4, WiMoonFirstQuarter, WiMoonWaxingGibbous6, WiMoonFull} from 'react-icons/wi' 
 
 

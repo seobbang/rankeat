@@ -1,3 +1,4 @@
+import React from 'react'
 
 const ViewReview = (dt) => {
 
@@ -143,10 +144,10 @@ const ViewReview = (dt) => {
                       </div>
                   
                 </div>
-          )) 
+            )) 
           } 
 
-        </>
+       </>
     );
 }
 

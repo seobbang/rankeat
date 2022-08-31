@@ -294,8 +294,10 @@ button {
     border-left: none;
     border-right: none;
     border-bottom: 1.5px solid rgb(187, 185, 185);
+    padding-left: 5px;
     margin-bottom: 15px;
     width: 80%;
+    height: 23px;
 }
 
 /* .inputBox textarea {
@@ -321,7 +323,7 @@ button {
     margin:5px;
     padding: 0.6%;
     width: 100px;
-    height: 27px;
+    height: 25px;
     text-align: center;
 
     color: rgb(255, 255, 255);
@@ -333,13 +335,12 @@ button {
 }
 
 .createList input[type='checkbox']+label:active {
-    border: 4px inset rgba(255,51,51,0.77)
+    border: 2px inset rgba(255,51,51,0.77)
 }
 
 .createList input[type="checkbox"]:checked+label {
     background-color: rgba(255,51,51,0.77)
 }
-
 
 .createOrNot{
     display: flex;
@@ -351,6 +352,7 @@ button {
 }
 
 .createOrNot button {
+    margin-top: 10px;
     width: 40%;
     border: none;
     border-radius: 3px;
