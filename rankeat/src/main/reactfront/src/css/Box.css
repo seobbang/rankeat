@@ -1,12 +1,8 @@
 
-
-.material-symbols-outlined {
-    margin-left:90px;
-}
-
 .tebox{
     border:1.5px solid white;
-    position:relative;
+    margin-left: 70px;
+    margin-top:30px;
     top:40px;
     right:200px;
     height:100px;
