@@ -1,11 +1,13 @@
-import react from "react";
+import React from "react";
 import CancelProduct from "./CancelProduct";
 import "../css/Postpage.css";
+import AppLayout from "./AppLayout";
 
 const Postpage =() =>{
 
   return (
     <div className = "followlist-container">
+        <AppLayout/>
       <div className = "followlist">
         <div className = "followbtn"><button>#감성카페</button></div>
         <CancelProduct />

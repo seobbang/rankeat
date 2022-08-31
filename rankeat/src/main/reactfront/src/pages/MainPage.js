@@ -1,27 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ReactDOM } from "react";
 import { Input } from "antd";
 import axios from 'axios';
+import AppLayout from "./AppLayout";
+import SearchBar from "./SearchBar";
 const {Search} = Input;
 
 //search 검색창.
 function MainPage(props) {
   const [products, setProducts] = useState([]);
   useEffect(()=>{
-    axios.get("http://localhost:3000/products"),then((result) => {
+    axios.get("http://localhost:3000/products").then((result) => {
       const products= result.data.products;
-      setProducts(products);}).catch((e)=>console.log(e);)
-    })
+      setProducts(products);
+    }).catch((e)=>console.log(e))
   },[])
 
   
   return (
-    <AppLayout>
+    <>
     <div className="tab">
+      <AppLayout/>
+      <SearchBar/>
       <div class= "tab-container">
 
       </div>
-      <Search placeholder ="오늘의 추천맛집은? style= {{width : 200,}}/>
+      {/*<Search placeholder ="오늘의 추천맛집은? style= {{width : 200,}}/>*/}
     </div>
     <div className="Hashtag">
        <div class="Hashtag-button-1">
@@ -56,7 +60,7 @@ function MainPage(props) {
         ))}
       </div>
     </div>
-    </AppLayout>
+</>
   );
 };
 

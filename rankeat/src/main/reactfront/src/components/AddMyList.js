@@ -1,11 +1,9 @@
 /* 내 맛집 리스트 드롭다운 메뉴 */
 
 import Modal from 'react-modal';
-
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import React, { useState } from 'react';
-import AppLayout from "../pages/AppLayout";
 
 
 const AddMyList = () => {
@@ -69,7 +67,7 @@ const AddMyList = () => {
       <div className="myList">
 
                   <DropdownButton id="dropdown-basic-button" title="내 리스트에 추가" size='sm'>
-                      <Dropdown.Item  href="#/putMyList" onClick={handleClick}>List1</Dropdown.Item>
+                      <Dropdown.Item href="#/putMyList" onClick={handleClick}>List1</Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item  href="#/createNewList" onClick={handleCreateList}>새 리스트 만들기</Dropdown.Item>
                   </DropdownButton>
