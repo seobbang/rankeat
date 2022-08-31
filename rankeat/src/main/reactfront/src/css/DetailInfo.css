@@ -108,7 +108,7 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
 
-    padding-left: 40px;
+    padding-left: 20px;
     flex-basis: 50%;
     flex-grow: 1;
 }
@@ -126,6 +126,7 @@ button {
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding-left: 10px;
 
     font-size: 14px;
 }
@@ -144,13 +145,18 @@ button {
 }
 
 .moon_grade .moon {
-    width: 120px;
-    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     margin: auto;
 
-    border: 1px solid black;
     margin-bottom: 15px;
 }
+
+/* .moon_grade .moon div {
+
+} */
 
 .moon_grade .grade {
     font-size: 20px;
@@ -220,9 +226,13 @@ button {
 }
 
 .reviewBox .assessment {
-    font-size: 12px;
+    font-size: 11px;
     flex-basis: 20%;
-    padding-left: 20px;
+    padding-left: 30px;
+}
+
+.reviewBox .assessment div {
+    padding-bottom: 4px;
 }
 
 /* .totalAssessment div {
@@ -245,6 +255,8 @@ button {
     border: 2px solid rgba(223, 213, 213, 0.77);
     border-radius: 5px;
     padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 
 }
 
@@ -256,12 +268,13 @@ button {
     margin: auto;
     background-color: white;
     border: 5px solid rgba(290,51,51,0.6);
-    border-radius: 20px;
+    border-radius: 10px;
     width: 300px;
 }
 
 .createList .inputBox {
     padding: 25px;
+    padding-bottom: 20px;
 }
 
 .inputBox :nth-child(1) {
@@ -285,13 +298,14 @@ button {
     width: 80%;
 }
 
-.inputBox textarea {
+/* .inputBox textarea {
     border: 1.5px solid rgb(187, 185, 185);
     width: 90%;
     height: 40px;
     padding: 10px;
     margin-bottom: 15px;
-}
+    font-size: 11px;
+} */
 
 .createList .keywords {
     display: flex;
@@ -299,25 +313,39 @@ button {
     flex-wrap: wrap;
 }
 
-.createList button {
+.createList input[type=checkbox]+label {
     background-color: rgb(187, 185, 185);
     border: none;
     border-radius: 3px;
     
     margin:5px;
+    padding: 0.6%;
     width: 100px;
-    height: 30px;
+    height: 27px;
+    text-align: center;
 
     color: rgb(255, 255, 255);
+    font-size: 13px;
 }
 
-.createList button:hover {
+.createList input[type=checkbox]+label:hover {
     background-color: rgba(255,51,51,0.77);
 }
+
+.createList input[type='checkbox']+label:active {
+    border: 4px inset rgba(255,51,51,0.77)
+}
+
+.createList input[type="checkbox"]:checked+label {
+    background-color: rgba(255,51,51,0.77)
+}
+
 
 .createOrNot{
     display: flex;
     justify-content: space-between;
+
+    height: 35px;
 
     border-top: 2px dotted rgb(187, 185, 185);
 }
@@ -325,6 +353,7 @@ button {
 .createOrNot button {
     width: 40%;
     border: none;
+    border-radius: 3px;
     background-color: white ;
     color: rgb(187, 185, 185);
     font-weight: bold ;
@@ -364,14 +393,18 @@ button {
     font-size: 10px;
 }
 
-.addListModal, .createListModal{
+#myListdropdown,#createListDropdown {
+    font-size: 15px;
+}
+
+.addListModal, .alreadyExistsModal, .createListModal{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-.addListModal .content{
+.addListModal .content, .alreadyExistsModal .content{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -385,7 +418,7 @@ button {
     border-radius: 20px;
 }
 
-.addListModal .content div {
+.addListModal .content div, .alreadyExistsModal .content div {
     display:flex;
     justify-content: center;
     
@@ -394,18 +427,9 @@ button {
     color:  rgba(255,51,51,0.77);
 }
 
-.addListModal img {
+.addListModal img, .alreadyExistsModal img {
     width: 50px;
     height: 50px;
-}
-
-.addListModal .content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    background-color:rgb(255, 255, 255);
 }
 
 .createListModal {
