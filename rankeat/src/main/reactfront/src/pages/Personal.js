@@ -40,23 +40,22 @@ function Personal() {
     };
 
      */
-    return (
+return (
 
-        <div>
-            <AppLayout/>
-            <div className='minibox'>
-                개인정보수정
+            <div>
+                <AppLayout/>
+                <div className='minibox'>
+                    개인정보수정
                 <div className='nick'>
                     <p>닉네임</p>
-                    <p><input type="text" placeholder="새로운 닉네임 입력" /></p>
-                    <button>중복확인</button>
+                    <p><input type="text" placeholder="새로운 닉네임 입력" onChange={onNickHandler}/></p>
+
+                <button /*onClick={UpdateNick}*/  type="button" className='correctbtn'>수정하기</button>
                 </div>
-                <button onClick={function(){
-                    alert('수정되었습니다.');
-                }}  type="button" >수정하기</button>
+                </div>
             </div>
-        </div>
-    )
-}
+
+ )}
+
 
 export default Personal;
