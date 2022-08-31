@@ -9,33 +9,97 @@ import ViewReview from '../components/ViewReview'
 import AddMyList from '../components/AddMyList'
 import AppLayout from "./AppLayout";
 
-const DetailInfo = () => {
+const DetailInfo = ({loginState}) => {
 
-    return (
-        <>
-            <AppLayout/>
-            <div className='name'>업체명</div>
-            
-            <div className='detailInfo'>
+    //test용 더미데이터 
+    const dummy = {
+       "data": {
+           "reviewList": [
+               {
+                   "writer" : "nickname1",
+                   "contents" : "text1",
+                   "price" : "1",
+                   "waiting" : "1",
+                   "taste" : "1",
+                   "clean" : "1",
+                   "service" : "1"
+               },
+               {
+                   "writer" : "nickname2",
+                   "contents" : "text2",
+                   "price" : "2",
+                   "waiting" : "3",
+                   "taste" : "1",
+                   "clean" : "3",
+                   "service" : "2"
+               },
+               {
+                   "writer" : "nickname3",
+                   "contents" : "text2",
+                   "price" : "3",
+                   "waiting" : "2",
+                   "taste" : "3",
+                   "clean" : "3",
+                   "service" : "2"
+               },
+            ],
+           "store" :
+               {
+                   "tel" : "01012345678",
+                   "address" : "서울특별시 서대문구 창천동",
+                   "storename" : "식당이름",
+                   "storetype" : "한식",
+                   "dong" : "1", // 1: 대현동(이대), 2: 창천동(신촌), 3: 연희동(연희)
+                   "price" : "1", // 정수 1~3 중 택 1
+                   "waiting" : "1", // 정수 1~3 중 택 1
+                   "taste" : "1", // 정수 1~3 중 택 1
+                   "clean" : "1", // 정수 1~3 중 택 1
+                   "service" : "1", // 정수 1~3 중 택 1
+                   "tag1" : "1",
+                   "tag2" : "2",
+                   "tag3" : "3", // 태그 번호 1~10 중 3개를 tag1, 2, 3에 각각 반환
+                   "dalpoint" : "1.25"
+               }
+       },
 
-                <div className='info'>
-                    <RestaurantInfo />
-                </div>
-                
-                <div className='info_right'>
-                     <AddMyList/>
-                    <div className='rating'>       
-                        <Rating />
-                    </div>
-                </div>
+       "data2": {
+           "myList": [
+               {
+                   "listname": "rankeatList",
+                   "listnum": "12"
+               }
+           ]
+       }
+       
+   }
 
-            </div>
+ //====================================================================================
+   return (
+       <>
+           <AppLayout/>
+           
+           <div className='name'>{dummy.data.store.storename}</div>
+           
+           <div className='detailInfo'>
 
-            <div className='viewReview'>
-                    <ViewReview />
-            </div>
-        </>
-    );
+               <div className='info'>
+                   <RestaurantInfo store={dummy.data.store}/>
+               </div>
+               
+               <div className='info_right'>
+                    <AddMyList myList={dummy.data2.myList} loginState={loginState}/>
+                   <div className='rating'>       
+                       <Rating store={dummy.data.store} loginState={loginState} />
+                   </div>
+               </div>
+
+           </div>
+
+           <div className='viewReview'>
+                   <ViewReview reviewList={dummy.data.reviewList}/>
+           </div>
+       </>
+   );
 }
 
 export default DetailInfo
