@@ -9,7 +9,9 @@ function Myreview() {
         <main>
             <AppLayout/>
            <div className='graybox'>
-               <div className='textbox'>식당이름자리 <br></br>
+               <div className='textbox'>식당이름자리{"   "}
+                   #____ #____ #____
+                   <br></br>
                    <p></p>
                    가격:<br></br>
                    웨이팅:<br></br>
@@ -21,7 +23,9 @@ function Myreview() {
 
 
             <div className='graybox'>
-                <div className='textbox'>식당이름자리 <br></br>
+                <div className='textbox'>식당이름자리{"   "}
+                    #____ #____ #____
+                    <br></br>
                     <p></p>
                     가격:<br></br>
                     웨이팅:<br></br>
@@ -34,7 +38,9 @@ function Myreview() {
 
 
             <div className='graybox'>
-                <div className='textbox'>식당이름자리 <br></br>
+                <div className='textbox'>식당이름자리{"   "}
+                    #____ #____ #____
+                    <br></br>
                     <p></p>
                     가격:<br></br>
                     웨이팅:<br></br>
@@ -45,7 +51,9 @@ function Myreview() {
             </div>
 
             <div className='graybox'>
-                <div className='textbox'>식당이름자리 <br></br>
+                <div className='textbox'>식당이름자리{"   "}
+                    #____ #____ #____
+                    <br></br>
                     <p></p>
                     가격:<br></br>
                     웨이팅:<br></br>
