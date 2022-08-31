@@ -5,12 +5,16 @@
     margin-top:100px;
 
     position:absolute;
-    left:35%;
+    left:50%;
 
 text-align:center;
     font-weight:bold;
     font-size:24px;
 
+}
+.correctbtn{
+    background-color:rgba(255, 51, 51, 0.77);
+    border:1px solid rgba(255, 51, 51, 0.77);
 }
 .nick{
     margin-top:50px;

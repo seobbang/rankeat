@@ -50,7 +50,7 @@ return (
                     <p>닉네임</p>
                     <p><input type="text" placeholder="새로운 닉네임 입력" onChange={onNickHandler}/></p>
 
-                <button /*onClick={UpdateNick}*/  type="button" >수정하기</button>
+                <button /*onClick={UpdateNick}*/  type="button" className='correctbtn'>수정하기</button>
                 </div>
                 </div>
             </div>
