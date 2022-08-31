@@ -2,42 +2,40 @@
 
 const RestaurantInfo = (dt) => {
 
-    //numToKeword함수 : dt.store.tag의 정수 값을 받아 해당 수에 대응하는 키워드로 치환하는 함수  ->  스위치문 / 인자(dt.store.tag) / 반환값(키워드 문자열)
-
     function numToKeword (tag) {
 
         let keyword  ='';
 
         switch (tag) {
             case "1":
-                keyword = '키워드1';
+                keyword = '가성비 좋음';
                 break;
             case '2':
-                keyword = '키워드2';
+                keyword = '넉넉한 밥양';
                 break;
             case "3":
-                keyword = '키워드3';
+                keyword = '밥약에 좋음';
                 break;
             case "4":
-                keyword = '키워드4';
+                keyword = '카공에 적합';
                 break;
             case "5":
-                keyword = '키워드5';
+                keyword = '미팅에 적합';
                 break;
             case "6":
-                keyword = '키워드6';
+                keyword = '혼밥에 적당';
                 break;
             case "7":
-                keyword = '키워드7';
+                keyword = '늦게까지 함';
                 break;
             case "8":
-                keyword = '키워드8';
+                keyword = '특별한 날에';
                 break;
             case "9":
-                keyword = '키워드9';
+                keyword = '매장이 깨끗';
                 break;
             case "10":
-                keyword = '키워드10';
+                keyword = '재료가 신선';
                 break;                
             default:
                 keyword = '';
