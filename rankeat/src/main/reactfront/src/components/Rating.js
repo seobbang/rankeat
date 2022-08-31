@@ -1,33 +1,44 @@
 /* 업체 평점 */
+import {WiMoonWaxingCrescent2, WiMoonWaxingCrescent4, WiMoonFirstQuarter, WiMoonWaxingGibbous6, WiMoonFull} from 'react-icons/wi' 
 
-const Rating = (dt) => {
+
+const Rating = (dt,loginState) => {
 
     let assessment = '';
     
     function handleClick (e) {
-        window.location.href = '/WriteReview'
+        if(loginState) {
+            const userId = window.localStorage.getItem('id');
+            window.location.href = '/WriteReview'
+        } else {
+            alert("로그인 후 이용해주세요.");
+        }
     }
 
-    //dalpointImg 함수 : dt.store.dalpoint 값을 받아 그 값 범주에 따라 다른 이미지 반환 -> 조건문 / 반환값(달 그림)
 
-    // function dal (num) {
+    function dalPointToIcon (num) { 
 
-    //     if (num<=1) {
+        let dalIcon = '';
 
-    //     }
-    //     else if (num<=2) {
+        if (num<=1) {
+            dalIcon = <WiMoonWaxingCrescent2 size='120'/>
+        }
+        else if (num<=2) {
+            dalIcon = <WiMoonWaxingCrescent4 size='120'/>
 
-    //     }
-    //     else if (num<=3) {
+        }
+        else if (num<=3) {
+            dalIcon = <WiMoonFirstQuarter size='120'/>
+        }
+        else if(num<=4) {
+            dalIcon = <WiMoonWaxingGibbous6 size='120'/>
+        }
+        else {
+            dalIcon = <WiMoonFull size='120'/>
+        }
 
-    //     }
-    //     else if(num<=4) {
-
-    //     }
-    //     else {
-
-    //     }
-    // }
+        return dalIcon;
+    }
 
     function numToPrice (num) {
 
@@ -133,7 +144,9 @@ const Rating = (dt) => {
     return(
         <>
             <div className="moon_grade">
-                <div className="moon"></div>   {/*dalpointImg 함수 호출*/}
+                <div className="moon">
+                        {dalPointToIcon(dt.store.dalpoint)}
+                </div>  
                 <span className="grade">{dt.store.dalpoint}</span>
             </div>
 
