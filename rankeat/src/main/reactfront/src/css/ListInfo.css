@@ -1,3 +1,71 @@
-.restbox{
-    background-color: blue;
+
+.first {
+    border:3px solid rgba(255, 51, 51, 0.77);
+    float: left;
+    width:20%;
+    height:180px;
+    box-sizing: border-box;
+    text-align:center;
+}
+
+.second{
+    border:3px solid rgba(255, 51, 51, 0.77);
+    float: left;
+    margin-left: 5%;
+    width:20%;
+    height:180px;
+    text-align:center;
+    box-sizing: border-box;
+}
+
+.third{
+    border:3px solid rgba(255, 51, 51, 0.77);
+    float: right;
+    width:20%;
+    margin-left: 10%;
+    height:180px;
+    box-sizing: border-box;
+    text-align:center;
+}
+
+.forth{
+    border:3px solid rgba(255, 51, 51, 0.77);
+    float: left;
+    margin-left: 5%;
+    width:20%;
+    height:180px;
+    text-align:center;
+    box-sizing: border-box;
+}
+
+.fifth{
+    border:3px solid rgba(255, 51, 51, 0.77);
+    float: left;
+    margin-top:50px;
+    width:20%;
+    height:180px;
+    box-sizing: border-box;
+    text-align:center;
+}
+
+.six{
+    border:3px solid rgba(255, 51, 51, 0.77);
+    float: left;
+    margin-left: 5%;
+    margin-top:50px;
+    width:20%;
+    height:180px;
+    text-align:center;
+    box-sizing: border-box;
+}
+
+.seven{
+    border:3px solid rgba(255, 51, 51, 0.77);
+    float: left;
+    margin-left: 5%;
+    margin-top:50px;
+    width:20%;
+    height:180px;
+    text-align:center;
+    box-sizing: border-box;
 }
