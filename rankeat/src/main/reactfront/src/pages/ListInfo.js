@@ -94,63 +94,63 @@ export default ListInfo;
     };
         <div className='main'>
             <AppLayout/>
-             <div className='liname'>리스트이름</div>
+             <div className='liname'>{listnum}</div>
             <br></br>
 
             <div className='first'>
-                <h3>식당이름</h3>
+                <h3>{data.eatList.storename[0]}</h3>
                 <div class="img"></div>
-                <IoMoon/> 3.5
+                <IoMoon/> {data.eatList.dalpoint[0]}
                 <div className='tag'>{data.tag1}<br></br>{data.tag2}<br></br>{data.tag3}</div>
                 </div>
             </div>
 
             <div className='second'>
-                <h3>식당이름</h3>
+                <h3>{data.eatList.storename[1]}</h3>
                 <div class="img"></div>
-                <IoMoon/> 3.5
+                <IoMoon/> {data.eatList.dalpoint[1]}
                 <div className='tag'>{data.tag1}<br></br>{data.tag2}<br></br>{data.tag3}</div>
             </div>
 
             <div className='third'>
-                <h3>식당이름</h3>
+                <h3>{data.eatList.storename[2]}</h3>
                 <div class="img"></div>
-                <IoMoon/> 3.5
+                <IoMoon/> {data.eatList.dalpoint[2]}
                 <div className='tag'>{data.tag1}<br></br>{data.tag2}<br></br>{data.tag3}</div>
             </div>
 
             <div className='forth'>
-                <h3>식당이름</h3>
+                <h3>{data.eatList.storename[3]}</h3>
                 <div class="img"></div>
-                <IoMoon/> 3.5
+                <IoMoon/> {data.eatList.dalpoint[3]}
                 <div className='tag'>{data.tag1}<br></br>{data.tag2}<br></br>{data.tag3}</div>
             </div>
 
             <div className='fifth'>
-                <h3>식당이름</h3>
+                <h3>{data.eatList.storename[4]}</h3>
                 <div class="img"></div>
-                <IoMoon/> 3.5
+                <IoMoon/> {data.eatList.dalpoint[4]}
                 <div className='tag'>{data.tag1}<br></br>{data.tag2}<br></br>{data.tag3}</div>
             </div>
 
             <div className='six'>
-                <h3>식당이름</h3>
+                <h3>{data.eatList.storename[5]}</h3>
                 <div class="img"></div>
-                <IoMoon/> 3.5
+                <IoMoon/> {data.eatList.dalpoint[5]}
                 <div className='tag'>{data.tag1}<br></br>{data.tag2}<br></br>{data.tag3}</div>
             </div>
 
             <div className='seven'>
-                <h3>식당이름</h3>
+                <h3>{data.eatList.storename[6]}</h3>
                 <div class="img"></div>
-               <IoMoon/> 3.5
+               <IoMoon/> {data.eatList.dalpoint[6]}
                 <div className='tag'>{data.tag1}<br></br>{data.tag2}<br></br>{data.tag3}</div>
             </div>
 
             <div className='eight'>
-                <h3>식당이름</h3>
+                <h3>{data.eatList.storename[7]}</h3>
                 <div class="img"></div>
-                <IoMoon/> 3.5
+                <IoMoon/> {data.eatList.dalpoint[7]}
                 <div className='tag'>{data.tag1}<br></br>{data.tag2}<br></br>{data.tag3}</div>
             </div>
 
