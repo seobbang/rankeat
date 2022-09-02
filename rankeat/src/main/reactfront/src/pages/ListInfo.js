@@ -11,20 +11,20 @@ import { IoMoon } from "react-icons/io5"
              <div className='liname'>리스트이름</div>
             <br></br>
 
-            <div className='first'>
+            <div className='first_box'>
                 <h3>식당이름</h3>
                 <IoMoon/> 3.5
                 <div className='tag'>#____<br></br> #____<br></br> #____
                 </div>
             </div>
 
-            <div className='second'>
+            <div className='second_box'>
                 <h3>식당이름</h3>
                 <IoMoon/> 3.5
                 <div className='tag'>#____<br></br> #____<br></br> #____</div>
             </div>
 
-            <div className='third'>
+            <div className='third_box'>
                 <h3>식당이름</h3>
                 <IoMoon/> 3.5
                 <div className='tag'>#____<br></br> #____<br></br> #____</div>
