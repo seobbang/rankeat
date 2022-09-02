@@ -8,7 +8,7 @@ const SearchBar = () => {
         if(searchWhat === "store"){
             window.location.href=`/MainPage?word=${value}`;
         } else if(searchWhat === "list") {
-            window.location.href=`/Postpage?word=${value}`;
+            window.location.href=`/PostSearchpage?word=${value}`;
         }
     }
 

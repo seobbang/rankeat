@@ -5,7 +5,6 @@ import AppLayout from "./AppLayout";
 import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri"
 import { IoMoon } from "react-icons/io5"
 import SearchBar from "./SearchBar";
-import axios from "axios";
 
 const Home = ({loginState, setLoginState}) => {
     let totalRank = null;

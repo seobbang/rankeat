@@ -11,7 +11,7 @@ import WriteReview from "./pages/WriteReview";
 import MainPage from "./pages/MainPage";
 import Product from "./pages/Product";
 import Savepage from "./pages/Savepage";
-import Postpage from "./pages/Postpage";
+// import PostSearchpage from "./pages/PostSearchpage";
 
 function App() {
     const [loginState, setLoginState] = useState(true);
@@ -30,7 +30,7 @@ function App() {
                     <Route path="/MainPage" element = {<MainPage/>}/>
                     <Route path = "/Product" element= {<Product/>} />
                     <Route path = "/Savepage" element={<Savepage />}/>
-                    <Route path = "/Postpage" element={<Postpage/>}/>
+                    {/*<Route path={ "/PostSearchpage"} element={<PostSearchpage/>}/>*/}
                 </Routes>
 
             </div>
