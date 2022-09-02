@@ -11,6 +11,7 @@ import WriteReview from "./pages/WriteReview";
 import MainPage from "./pages/MainPage";
 import Product from "./pages/Product";
 import Savepage from "./pages/Savepage";
+import ListInfo from "./pages/ListInfo";
 // import PostSearchpage from "./pages/PostSearchpage";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                     <Route path="/MainPage" element = {<MainPage/>}/>
                     <Route path = "/Product" element= {<Product/>} />
                     <Route path = "/Savepage" element={<Savepage />}/>
+                    <Route path = "/ListInfo" element={<ListInfo />}/>
                     {/*<Route path={ "/PostSearchpage"} element={<PostSearchpage/>}/>*/}
                 </Routes>
 
