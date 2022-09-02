@@ -97,7 +97,7 @@ export default ListInfo;
              <div className='liname'>{listnum}</div>
             <br></br>
 
-            <div className='first'>
+            <div className='first' onClick={() => window.location.href="/DetailInfo/?storeNum=${storenum}"}>
                 <h3>{data.eatList.storename[0]}</h3>
                 <div class="img"></div>
                 <IoMoon/> {data.eatList.dalpoint[0]}
@@ -105,49 +105,49 @@ export default ListInfo;
                 </div>
             </div>
 
-            <div className='second'>
+            <div className='second' onClick={() => window.location.href="/DetailInfo/?storeNum=${storenum}"}>
                 <h3>{data.eatList.storename[1]}</h3>
                 <div class="img"></div>
                 <IoMoon/> {data.eatList.dalpoint[1]}
                 <div className='tag'>{data.tag1}<br></br>{data.tag2}<br></br>{data.tag3}</div>
             </div>
 
-            <div className='third'>
+            <div className='third' onClick={() => window.location.href="/DetailInfo/?storeNum=${storenum}">
                 <h3>{data.eatList.storename[2]}</h3>
                 <div class="img"></div>
                 <IoMoon/> {data.eatList.dalpoint[2]}
                 <div className='tag'>{data.tag1}<br></br>{data.tag2}<br></br>{data.tag3}</div>
             </div>
 
-            <div className='forth'>
+            <div className='forth' onClick={() => window.location.href="/DetailInfo/?storeNum=${storenum}">
                 <h3>{data.eatList.storename[3]}</h3>
                 <div class="img"></div>
                 <IoMoon/> {data.eatList.dalpoint[3]}
                 <div className='tag'>{data.tag1}<br></br>{data.tag2}<br></br>{data.tag3}</div>
             </div>
 
-            <div className='fifth'>
+            <div className='fifth' onClick={() => window.location.href="/DetailInfo/?storeNum=${storenum}">
                 <h3>{data.eatList.storename[4]}</h3>
                 <div class="img"></div>
                 <IoMoon/> {data.eatList.dalpoint[4]}
                 <div className='tag'>{data.tag1}<br></br>{data.tag2}<br></br>{data.tag3}</div>
             </div>
 
-            <div className='six'>
+            <div className='six' onClick={() => window.location.href="/DetailInfo/?storeNum=${storenum}">
                 <h3>{data.eatList.storename[5]}</h3>
                 <div class="img"></div>
                 <IoMoon/> {data.eatList.dalpoint[5]}
                 <div className='tag'>{data.tag1}<br></br>{data.tag2}<br></br>{data.tag3}</div>
             </div>
 
-            <div className='seven'>
+            <div className='seven' onClick={() => window.location.href="/DetailInfo/?storeNum=${storenum}">
                 <h3>{data.eatList.storename[6]}</h3>
                 <div class="img"></div>
                <IoMoon/> {data.eatList.dalpoint[6]}
                 <div className='tag'>{data.tag1}<br></br>{data.tag2}<br></br>{data.tag3}</div>
             </div>
 
-            <div className='eight'>
+            <div className='eight' onClick={() => window.location.href="/DetailInfo/?storeNum=${storenum}">
                 <h3>{data.eatList.storename[7]}</h3>
                 <div class="img"></div>
                 <IoMoon/> {data.eatList.dalpoint[7]}
