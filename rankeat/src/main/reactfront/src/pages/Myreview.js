@@ -8,7 +8,7 @@ function Myreview() {
     return (
         <main>
             <AppLayout/>
-           <div className='graybox'>
+           <div className='graybox_1'>
                <div className='textbox'>식당이름자리{"   "}
                    #____ #____ #____
                    <br></br>
@@ -22,7 +22,7 @@ function Myreview() {
            </div>
 
 
-            <div className='graybox'>
+            <div className='graybox_2'>
                 <div className='textbox'>식당이름자리{"   "}
                     #____ #____ #____
                     <br></br>
@@ -37,7 +37,7 @@ function Myreview() {
 
 
 
-            <div className='graybox'>
+            <div className='graybox_3'>
                 <div className='textbox'>식당이름자리{"   "}
                     #____ #____ #____
                     <br></br>
@@ -50,7 +50,7 @@ function Myreview() {
                 </div>
             </div>
 
-            <div className='graybox'>
+            <div className='graybox_4'>
                 <div className='textbox'>식당이름자리{"   "}
                     #____ #____ #____
                     <br></br>
