@@ -1,0 +1,35 @@
+.lobox{
+    border:3px solid rgba(255, 51, 51, 0.77);
+    width:500px;
+    height:400px;
+    text-align:center;
+    margin: 10px auto;
+    width: 300px;
+
+}
+.lobtn{
+    width:170px;
+    height:27px;
+    margin-top:80px;
+    margin-right:60px;
+    margin-left:60px;
+    background: rgba(255, 51, 51, 0.77);
+    padding: 0.25rem ;
+    border: 1px solid rgba(255, 51, 51, 0.77);
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    line-height: 0.2;
+}
+.joinbtn{
+    width:170px;
+    height:27px;
+    margin-top:20px;
+    margin-right:60px;
+    margin-left:60px;
+    background:rgb(224, 224, 224);
+    padding: 0.25rem ;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    line-height: 0.2;
+}

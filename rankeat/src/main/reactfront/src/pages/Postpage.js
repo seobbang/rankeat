@@ -1,65 +1,59 @@
-import react from "react";
-import CancelProduct from "./CancelProduct";
+import React from "react";
+import Product from "./Product";
 import "../css/Postpage.css";
+import AppLayout from "./AppLayout";
 
 const Postpage =() =>{
 
   return (
-    <div className = "followlist-container">
-      <div className = "followlist">
-        <div className = "followbtn"><button>#감성카페</button></div>
-        <CancelProduct />
-        <CancelProduct />
-        <button id = "btn">더보기</button>
-      </div>
-      <div className = "followlist">
-        <div className = "followbtn"><button>#지역핫플레이스</button></div>
-        <CancelProduct />
-        <CancelProduct />
-        <button id = "btn">더보기</button>
-      </div>
-      <div className = "followlist">
-        <div className = "followbtn"><button>#이색적인</button></div>
-        <CancelProduct />
-        <CancelProduct />
-        < button id = "btn">더보기</button>
-      </div>
-      <div className = "followlist">
-        <div className = "followbtn"><button>#레트로</button></div>
-        <CancelProduct />
-        <CancelProduct />
-        <button id = "btn">더보기</button>
-      </div>
-      <div className = "followlist">
-        <div className = "followbtn"><button>#레트로</button></div>
-        <CancelProduct />
-        <CancelProduct />
-        <button>더보기</button>
-      </div>
-      <div className = "followlist">
-        <div className = "followbtn"><button>#레트로</button></div>
-        <CancelProduct />
-        <CancelProduct />
-        <button>더보기</button>
-      </div>
-      <div className = "followlist">
-        <div className = "followbtn"><button>#레트로</button></div>
-        <CancelProduct />
-        <CancelProduct />
-        <button>더보기</button>
-      </div>
-      <div className = "followlist">
-        <div className = "followbtn"><button>#레트로</button></div>
-        <CancelProduct />
-        <CancelProduct />
-        <button>더보기</button>
-      </div>
-      <div className = "followlist">
-        <div className = "followbtn"><button>#레트로</button></div>
-        <CancelProduct />
-        <CancelProduct />
-        <button>더보기</button>
-      </div>
+    <div className = "postpage">
+        <AppLayout />
+        <div className = "postpage_container">
+            <div className = "postpagebtn"><button>#감성카페</button></div>
+            <div className = "postpage_container_row">
+                <Product key={id} storename={storename} image={image}/>
+                <Product key={id} storename={storename} image={image}/>
+                <Product id = id={} storename={storename} image={image}/>
+            </div>
+            <div className = "postpagebtn"><button>#감성카페</button></div>
+            <div className = "postpage_container_row">
+                <Product id={} storename={storename} image={image}/>
+                <Product id={} storename={storename} image={image}/>
+                <Product id = id={} storename={storename} image={image}/>
+
+            </div>
+            <div className = "postpagebtn"><button>#감성카페</button></div>
+            <div className = "postpage_container_row">
+                <Product id={} storename={storename} image={image}/>
+                <Product id={} storename={storename} image={image}/>
+                <Product id = id={} storename={storename} image={image}/>
+            </div>
+            <div className = "postpagebtn"><button>#감성카페</button></div>
+            <div className = "postpage_container_row">
+                <Product id={} storename={storename} image={image}/>
+                <Product id={} storename={storename} image={image}/>
+                <Product id = id={} storename={storename} image={image}/>
+            </div>
+            <div className = "postpagebtn"><button>#감성카페</button></div>
+            <div className = "postpage_container_row">
+                <Product id={} storename={storename} image={image}/>
+                <Product id={} storename={storename} image={image}/>
+                <Product id = id={} storename={storename} image={image}/>
+            </div>
+            <div className = "postpagebtn"><button>#감성카페</button></div>
+            <div className = "postpage_container_row">
+                <Product id={} storename={storename} image={image}/>
+                <Product id={} storename={storename} image={image}/>
+                <Product id = id={} storename={storename} image={image}/>
+            </div>
+            <div className = "postpagebtn"><button>#감성카페</button></div>
+            <div className = "postpage_container_row">
+                <Product id={} storename={storename} image={image}/>
+                <Product id={} storename={storename} image={image}/>
+                <Product id = id={} storename={storename} image={image}/>
+            </div>
+
+        </div>
     </div>
   )
 

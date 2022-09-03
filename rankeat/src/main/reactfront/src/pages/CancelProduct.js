@@ -1,30 +1,18 @@
-import react from "react";
+import React from "react";
 import "../css/CancelProduct.css";
 
 
-const CancelProduct =()=>{
+const CancelProduct =(id, image, storename)=>{
 
   return (
-    <div className = "Cancelproduct-container">
-      <div className = "Cancelproduct">
-        <div className = "Cancelproduct_img"><img src="..." alt="..." /></div>
-        <div cassName = "Cancelproduct_name">Productname</div>
-        <div id = "Cancelbtn"><button>장바구니 취소하기</button></div>
+      <div className = "cancelproduct">
+          <div className = "cancelproduct_info">
+              <img className={"cancelproduct_img"} src={image} alt="맛집 이미지" />
+              <div className = "cancelproduct_name"><h3>{storename}</h3></div>
+              <div className = "cancelbtn"><button>장바구니 취소하기</button></div>
+          </div>
       </div>
-      <div className = "Cancelproduct">
-        <div className = "Cancelproduct_img"><img src="..." alt="..." /></div>
-        <div cassName = "Cancelproduct_name">Productname</div>
-        <div id = "Cancelbtn"><button>장바구니 취소하기</button></div>
-      </div>
-      <div className = "Cancelproduct">
-        <div className = "Cancelproduct_img"><img src="..." alt="..." /></div>
-        <div cassName = "Cancelproduct_name">Productname</div>
-        <div id = "Cancelbtn"><button>장바구니 취소하기</button></div>
-      </div>
-      
-      
-      
-    </div>
+
   )
 }
 

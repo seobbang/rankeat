@@ -1,0 +1,41 @@
+.main-container {
+
+    justify-content: center;
+    padding : 20px;
+    margin : 15px;
+    
+}
+
+.hashtag_row {
+
+    justify-content: center;
+    align-items : center;
+    flex-direction: row;
+
+}
+
+.hashtag_row > retro {
+    color :white;
+    background-color: rgba(255, 51, 51, 0.77);
+    border-radius: 15%;
+    width : 20px;
+    font-size : 0.5rem;
+    margin : 10px;
+    padding :2px;
+    
+
+}
+
+.
+
+.empty-box {
+
+    color : black;
+    text-justify: center;
+    text-align : center;
+    width : 600px;
+}
+
+.search_content_row {
+    
+}

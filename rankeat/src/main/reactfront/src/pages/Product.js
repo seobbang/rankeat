@@ -1,29 +1,17 @@
-import React from "react";
+import React from 'react';
 import "../css/Product.css";
 
-const Product =()=>{
+function Product(id, storename, image) {
+    return (
+        <div className="product">
+            <div className={"product_info"}>
+                <img className={"product_img"} src={image} alt="맛집 이미지" />
+                <div className = "product_name"><h3>{storename}</h3></div>
+                <div className = "productbtn"><button>장바구니 취소하기</button></div>
 
-  return (
-    <div className = "product-container">
-      <div className = "product">
-        <div className = "product_img"><img src="..." alt="..." /></div>
-        <div cassName = "product_name">Productname</div>
-        <div id = "followbtn"><button>장바구니 담기</button></div>
-      </div>
-      <div className = "product">
-        <div className = "product_img"><img src="..." alt="..." /></div>
-        <div cassName = "product_name">Productname</div>
-        <div id = "followbtn"><button>장바구니 담기</button></div>
-      </div>
-      <div className = "product">
-        <div className = "product_img"><img src="..." alt="..." /></div>
-        <div cassName = "product_name">Productname</div>
-        <div id = "followbtn"><button>장바구니 담기</button></div>
-      </div>
-      
-    </div>
-  )
-
+            </div>
+        </div>
+    );
 }
 
 export default Product;

@@ -1,3 +1,28 @@
-.savepage_row {
-  margin-top : 7px;
+.savepage{
+
+  display: flex;
+
+  justify-content :center;
+  margin : 10px;
+  padding:10px;
+  flex-wrap: wrap;
+
+}
+
+.savepage_container {
+  display: flex;
+  justify-items: center;
+  justify-self: center;
+  flex-wrap: wrap;
+  padding : 3px;
+  margin : 2px;
+}
+
+.savepage_container_row {
+  display:flex;
+  justify-content:flex-start;
+  flex-direction: row;
+  padding : 10px;
+  margin : 5px;
+  
 }
