@@ -16,7 +16,7 @@ const Savepage=()=> {
            <DropDown />
            <div className = "savepage_container">
                <div className={"savepage_container_row"}>
-                   <CancelProduct />
+                   <CancelProduct key ={} storename = {storename}/>
                    <CancelProduct />
                    <CancelProduct />
                </div>

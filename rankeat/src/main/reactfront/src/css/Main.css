@@ -26,7 +26,11 @@
 
 }
 
-.
+.main_row {
+    justify-content: center;
+    flex-direction : row;
+    
+}
 
 .empty-box {
 
@@ -37,5 +41,18 @@
 }
 
 .search_content_row {
+    justify-content: center;
+    padding : 5px;
+    margin : 3px;
+
+
+
+    
+}
+
+.search_content_row > product {
+
+    padding : 8px;
+    margin : 5px;
     
 }

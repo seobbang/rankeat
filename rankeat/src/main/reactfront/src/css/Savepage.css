@@ -1,28 +1,28 @@
-.savepage{
-
-  display: flex;
-
-  justify-content :center;
-  margin : 10px;
-  padding:10px;
-  flex-wrap: wrap;
-
-}
-
 .savepage_container {
-  display: flex;
-  justify-items: center;
-  justify-self: center;
+
+  padding : 20px;
+  margin : 30px;
+  justify-content: center;
+  align-content : center;
   flex-wrap: wrap;
-  padding : 3px;
-  margin : 2px;
+
+
 }
 
 .savepage_container_row {
-  display:flex;
-  justify-content:flex-start;
-  flex-direction: row;
-  padding : 10px;
-  margin : 5px;
-  
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction :row;
+  margin : 10px;
+  padding : 15px;
+  align-content: center;
+
+}
+
+.savepage_container_row > CancelProduct {
+    padding : 10px;
+    margin : 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
 }

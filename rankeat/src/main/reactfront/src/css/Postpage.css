@@ -29,16 +29,28 @@
     font-weight: bold;
     height : 15px;
     width : 30px;
+    margin : 10px;
+    padding : 7px;
+    color : white;
+    
 }
 
 .postpage_container_row {
 
     justify-content: flex-start;
     flex-direction: row;
-    padding : 5px;
+    padding : 30px;
     margin : 5px;
+  
     
 }
+
+.postpage_container_row > Product {
+    margin :10px;
+    padding : 5px;
+    justify-content: space-around;
+}
+
 
 
 

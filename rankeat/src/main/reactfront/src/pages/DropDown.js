@@ -1,33 +1,34 @@
+import { Dropdown } from "bootstrap";
 import React from "react";
-import { Select } from 'antd';
-const { Option } = Select;
+import { useState } from "react";
+import Dropdownparent from "./Dropdownparent";
+
+const DropDown =(props)=>{
+
+  const [dropdownVisibility, setDropdownVisibility] =useState(false);
+
+  return (
+    <div id = "dropdown">
+      <button onClick={e => setDropwdownVisibility(!dropdownVisibility)}>
+        {
+          dropdownVisibility 
+                 ?  'Close'
+                 : 'Open'
+
+        }
+      </button>
+      <Dropdownparent visibility = {dropdownVisibility}>
+        <ul>
+          <li>연희동</li>
+          <li>신촌동</li>
+          <li>대현동</li>
+        </ul>
+      </Dropdownparent>
+    </div>
+  )
 
 
-const onChange = (value) => {
-  console.log(`selected ${value}`);
 };
-
-const onSearch = (value) => {
-  console.log('search:', value);
-};
-
-const DropDown = () => {
-
-  return(
-    <Select
-      showSearch
-      placeholder="오늘 가고 싶은 식당이 어디인가요?"
-      optionFilterProp="children"
-      onChange={onChange}
-      onSearch={onSearch}
-      filterOption={(input, option) => option.children.toLowerCase().includes(input.toLowerCase())}
-    >
-      <Option value="Sinchon">Sinchon</Option>
-      <Option value="Daehyeon">Daehyeon</Option>
-      <Option value="Ahyeon">Ahyeon</Option>
-    </Select>
-    )
-}
 
 
 
