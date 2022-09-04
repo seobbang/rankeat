@@ -8,9 +8,9 @@ import SearchBar from "./SearchBar";
 
 const Main=({item})=>{
 
-    const request= axios.get("http://", {params:{search_item}, withCredentials:true}).then((response) => reponse.data)
-    const query=qs.parse(location.search, {ignoreQueryPrefix : true,});
-    const searchResult = query.detail === "true";
+    const request= axios.get("/search/list", {"search" : query.word}, withCredentials:true};).then((response) => reponse.data)
+    const query=qs.parse(window.location.search, {ignoreQueryPrefix : true,});
+    
 
   return (
 
@@ -39,7 +39,7 @@ const Main=({item})=>{
                     <div className = "search_content_row">
                         {this.state.searchResult.map((item) =>{
                             return(
-                                <Product key={id} storename={storename} />)
+                                <Product key={data.storeSearchList.storenum} storename={data.storeSearchList.storename} />)
 
                             ;
                         })}

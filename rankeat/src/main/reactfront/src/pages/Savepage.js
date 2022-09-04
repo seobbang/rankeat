@@ -8,6 +8,8 @@ import SearchBar from "./SearchBar";
 
 const Savepage=()=> {
 
+    
+
     return (
        
        <div className = "savepage">
@@ -16,24 +18,25 @@ const Savepage=()=> {
            <DropDown />
            <div className = "savepage_container">
                <div className={"savepage_container_row"}>
-                   <CancelProduct key ={} storename = {storename}/>
-                   <CancelProduct />
-                   <CancelProduct />
+                /*wiki봐도 이해가 안되는 부분 : 위키에서 savepage에서 mylist에서 list가져오는 것인데, storename을 보여주는 데이터는 아무리 찾아봐도 없음 */
+                   <CancelProduct key ={data.mylist.listnum} storename = {data.listname.rankeatList}/>
+                   <CancelProduct key ={data.mylist.listnum} storename = {data.listname.rankeatList} />
+                   <CancelProduct key ={data.mylist.listnum} storename = {data.listname.rankeatList}/>
                </div>
                <div className={"savepage_container_row"}>
-                   <CancelProduct />
-                   <CancelProduct />
-                   <CancelProduct />
+                   <CancelProduct key ={data.mylist.listnum} storename = {data.listname.rankeatList}/>
+                   <CancelProduct key ={data.mylist.listnum} storename = {data.listname.rankeatList}/>
+                   <CancelProduct key ={data.mylist.listnum} storename = {data.listname.rankeatList}/>
                </div>
                <div className={"savepage_container_row"}>
-                   <CancelProduct />
-                   <CancelProduct />
-                   <CancelProduct />
+                   <CancelProduct key ={data.mylist.listnum} storename = {data.listname.rankeatList}/>
+                   <CancelProduct key ={data.mylist.listnum} storename = {data.listname.rankeatList}/>
+                   <CancelProduct key ={data.mylist.listnum} storename = {data.listname.rankeatList}/>
                </div>
                <div className={"savepage_container_row"}>
-                   <CancelProduct />
-                   <CancelProduct />
-                   <CancelProduct />
+                   <CancelProduct key ={data.mylist.listnum} storename = {data.listname.rankeatList}/>
+                   <CancelProduct key ={data.mylist.listnum} storename = {data.listname.rankeatList}/>
+                   <CancelProduct key ={data.mylist.listnum} storename = {data.listname.rankeatList}/>
                </div>
            </div>
        </div>

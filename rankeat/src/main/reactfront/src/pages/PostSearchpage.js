@@ -12,8 +12,8 @@ function PostSearchpage() {
 
 
     const query=qs.parse(window.location.search, {ignoreQueryPrefix : true,}); 
-     /*const request= axios.get("/search/list", {params:{"search" : query.word}, withCredentials:true}).then((response) => response.data).catch(()=>{console.log(e);})
-    requst.storesearchlist
+    const request= axios.get("/mylist/list/:userIdx", {params:{"search" : query.word}, withCredentials:true}).then((response) => response.data).catch(()=>{console.log(e);})
+    const searchResult = requst.storesearchlist(() =>[]);
 
 
     /*searchlist는 request.sotresearchlist로 만들어서 검색결과를 객체로 저장해야됨 */
@@ -26,7 +26,7 @@ function PostSearchpage() {
                 {this.state.searchResult>0 ? (
                     <div className={"postsearchpage_row"}>
                         {this.state.searchResult.map((item)=>{return(
-                            <CancelProduct key={id} storename={storename}/>
+                            <CancelProduct key={data.myList.listnum} storename={data.myList.listname}/>
                             );
                         })}
                     </div>

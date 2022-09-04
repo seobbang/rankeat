@@ -11,7 +11,7 @@ const Postpage =() =>{
         <div className = "postpage_container">
             <div className = "postpagebtn"><button>#감성카페</button></div>
             <div className = "postpage_container_row">
-                <Product key={id} storename={storename} image={image}/>
+                <Product key={data.myList.listnum} storename={storename}/>
                 <Product key={id} storename={storename} image={image}/>
                 <Product id = id={} storename={storename} image={image}/>
             </div>
