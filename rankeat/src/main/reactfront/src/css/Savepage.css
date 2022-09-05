@@ -1,3 +1,28 @@
-.savepage_row {
-  margin-top : 7px;
+.savepage_container {
+
+  padding : 20px;
+  margin : 30px;
+  justify-content: center;
+  align-content : center;
+  flex-wrap: wrap;
+
+
+}
+
+.savepage_container_row {
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction :row;
+  margin : 10px;
+  padding : 15px;
+  align-content: center;
+
+}
+
+.savepage_container_row > CancelProduct {
+    padding : 10px;
+    margin : 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
 }

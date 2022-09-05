@@ -2,13 +2,14 @@
 import React from 'react'
 
 import Modal from 'react-modal';
+
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { useState } from 'react';
 
 const AddMyList = (dt, loginState) => {
 
-  // 더미데이터 
+  // 더미데이터
    const dummy =  {
     "data": {
       "myList": [
@@ -77,7 +78,7 @@ const AddMyList = (dt, loginState) => {
         "ltag7" : false,
         "ltag8" : false,
         "ltag9" : false,
-        "ltag10" : false    
+        "ltag10" : false
       })
 
     // 리스트명 저장
@@ -105,12 +106,12 @@ const AddMyList = (dt, loginState) => {
           totalChecked -= 1;
       }
     }
- 
+
     // 태그 선택 여부 저장  - 에러: setInputData 넣으면 countChecked 작동 안됨
-    function getTagValue (e) {      
+    function getTagValue (e) {
       countChecked(e)
 
-      // setInputData({   
+      // setInputData({
       //   ...inputData,
       //   [e.target.id] : e.target.checked,
       // })
@@ -118,7 +119,7 @@ const AddMyList = (dt, loginState) => {
 
 
     function handleSubmit(e) {
-      
+
       // 작성 항목 누락 확인
       if(inputData.listname.length < 1) {
         window.alert('맛집리스트 이름을 입력해주세요!');
@@ -128,15 +129,15 @@ const AddMyList = (dt, loginState) => {
         window.alert('3가지 키워드를 선택해주세요!');
       }
 
-      // 확인용 
+      // 확인용
       console.log(inputData);
-    
+
     }
 
     return (
-  
+
         <div className="createList">
-  
+
                 <div className="inputBox">
                         <div>리스트명</div>
                         <input id='listname' onChange={getListName}></input>
@@ -170,22 +171,22 @@ const AddMyList = (dt, loginState) => {
         
       <div className="myList">
 
-                  <DropdownButton onClick={handleLoginState} id="dropdown-basic-button" title="내 리스트에 추가" size='sm'>   
+                  <DropdownButton onClick={handleLoginState} id="dropdown-basic-button" title="내 리스트에 추가" size='sm'>
 
                       { dummy.data.myList.map((it) => (
                           <Dropdown.Item id='myListdropdown' onClick={handleClick}>
                           <div>{it.listname}</div>
                           </Dropdown.Item>
                       ))}
-                    
+
                       <Dropdown.Divider />
-                    
+
                       <Dropdown.Item id='createListDropdown'  href="#/createNewList" onClick={handleCreateList}>새 리스트 만들기</Dropdown.Item>
-                
+
                   </DropdownButton>
-                  
+
                 {/* 리스트에 식당 추가 성공/실패 알림 modal */}
-                    <Modal className='addListModal' isOpen={successAdd} onRequestClose={successAdd}>         
+                    <Modal className='addListModal' isOpen={successAdd} onRequestClose={successAdd}>
                             <div className='content'>
                               <div>
                                 <img src={process.env.PUBLIC_URL + '/image/addListSuccess.gif'}/>
@@ -194,7 +195,7 @@ const AddMyList = (dt, loginState) => {
                             </div>
                     </Modal>
 
-                    <Modal className='alreadyExistsModal' isOpen={failAdd} onRequestClose={failAdd}>         
+                    <Modal className='alreadyExistsModal' isOpen={failAdd} onRequestClose={failAdd}>
                             <div className='content'>
                               <div>
                                 <img src={process.env.PUBLIC_URL + '/image/addListSuccess.gif'}/>
@@ -205,7 +206,7 @@ const AddMyList = (dt, loginState) => {
 
                {/* 새 리스트 생성 modal */}
 
-                    <Modal className='createListModal' isOpen={createList} onRequestClose={createList}>         
+                    <Modal className='createListModal' isOpen={createList} onRequestClose={createList}>
                             <div className='content'>
                                <CreateList/>
                             </div>

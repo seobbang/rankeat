@@ -1,0 +1,41 @@
+.postsearchpage_container {
+
+    justify-content: center;
+    align-content: center;
+    margin :5px;
+    padding : 3px;
+    position : relative;
+    flex-wrap: wrap;
+}
+
+.postsearchpage_content {
+
+    justify-self: center;
+    padding : 10px;
+    margin : 5px;
+
+
+}
+
+.postsearchpage_row {
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px;
+    padding : 10px;
+
+}
+
+.postsearchpage_row > .CancelProduct {
+    padding : 5px;
+    margin : 10px;
+    flex-wrap : wrap;
+    justify-self:start;
+}
+
+.empty-box {
+    color : black;
+    text-align: center;
+    text-justify: center;
+    height : 600px;
+    width : 500px;
+}
