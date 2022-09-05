@@ -9,7 +9,7 @@ const DropDown =(props)=>{
 
   return (
     <div id = "dropdown">
-      <button onClick={e => setDropwdownVisibility(!dropdownVisibility)}>
+      <button onClick={e => setDropdownVisibility(!dropdownVisibility)}>
         {
           dropdownVisibility 
                  ?  'Close'

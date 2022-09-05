@@ -12,7 +12,8 @@ import MainPage from "./pages/MainPage";
 import Product from "./pages/Product";
 import Savepage from "./pages/Savepage";
 import ListInfo from "./pages/ListInfo";
-// import PostSearchpage from "./pages/PostSearchpage";
+import Postpage from "./pages/Postpage";
+import PostSearchpage from "./pages/PostSearchpage";
 
 function App() {
     const [loginState, setLoginState] = useState(true);
@@ -29,10 +30,11 @@ function App() {
                     <Route path='/DetailInfo' element={<DetailInfo loginState={{loginState}}/>}/>
                     <Route  path='/WriteReview' element={<WriteReview />}/>
                     <Route path="/MainPage" element = {<MainPage/>}/>
-                    <Route path = "/Product" element= {<Product/>} />
+                    {/*<Route path = "/Product" element= {<Product/>} />*/}
                     <Route path = "/Savepage" element={<Savepage />}/>
                     <Route path = "/ListInfo" element={<ListInfo />}/>
-                    {/*<Route path={ "/PostSearchpage"} element={<PostSearchpage/>}/>*/}
+                    <Route path = "/PostPage" element={<Postpage/>}/>
+                    <Route path={ "/PostSearchpage"} element={<PostSearchpage/>}/>
                 </Routes>
 
             </div>

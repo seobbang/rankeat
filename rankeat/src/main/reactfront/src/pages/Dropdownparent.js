@@ -14,7 +14,7 @@ const Dropdownparent =(props)=>{
             setVisibilityAnimation(true);
         }else {
             setRepeat(setTimeout(() => {
-                setVisibliltyAnimation(false);
+                setVisibilityAnimation(false);
             }, 400))
         }
     }, [props.visibility])

@@ -6,8 +6,10 @@ import { IoMoon } from "react-icons/io5"
 
  function ListInfo() {
     return (
+        <>
+        <AppLayout/>
         <div className='main'>
-            <AppLayout/>
+
              <div className='liname'>리스트이름</div>
             <br></br>
 
@@ -61,6 +63,7 @@ import { IoMoon } from "react-icons/io5"
             </div>
 
         </div>
+        </>
 
     )
 }

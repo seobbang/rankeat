@@ -12,8 +12,8 @@ function PostSearchpage() {
 
 
     const query=qs.parse(window.location.search, {ignoreQueryPrefix : true,}); 
-    const request= axios.get("/mylist/list/:userIdx", {params:{"search" : query.word}, withCredentials:true}).then((response) => response.data).catch(()=>{console.log(e);})
-    const searchResult = requst.storesearchlist(() =>[]);
+    // const request= axios.get("/mylist/list/:userIdx", {params:{"search" : query.word}, withCredentials:true}).then((response) => response.data).catch(()=>{console.log(e);})
+    // const searchResult = requst.storesearchlist(() =>[]);
 
 
     /*searchlist는 request.sotresearchlist로 만들어서 검색결과를 객체로 저장해야됨 */
@@ -25,10 +25,10 @@ function PostSearchpage() {
             <div className={"postsearchpage_content"}>
                 {this.state.searchResult>0 ? (
                     <div className={"postsearchpage_row"}>
-                        {this.state.searchResult.map((item)=>{return(
-                            <CancelProduct key={data.myList.listnum} storename={data.myList.listname}/>
-                            );
-                        })}
+                        {/*{this.state.searchResult.map((item)=>{return(*/}
+                        {/*    // <CancelProduct key={data.myList.listnum} storename={data.myList.listname}/>*/}
+                        {/*    );*/}
+                        {/*})}*/}
                     </div>
                 ) : (<div className={"empty-box"}>검색 결과가 뜨지 않습니다.</div>)}
             </div>
