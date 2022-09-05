@@ -2,6 +2,7 @@
 
 import '../css/DetailInfo.css';
 import React from "react";
+import axios from "axios";
 
 import RestaurantInfo from '../components/RestaurantInfo'
 import Rating from '../components/Rating'
@@ -10,6 +11,29 @@ import AddMyList from '../components/AddMyList'
 import AppLayout from "./AppLayout";
 
 const DetailInfo = ({loginState}) => {
+
+    let params = (new URL(document.location)).searchParams;
+    let storeNum = params.get('storeNum');
+
+    let reviewList = '';
+    let storeInfo = '';
+
+    axios.get('/store/info', {
+        params : {
+            storeidx : storeNum
+        }
+    })
+      .then(function (response) {
+        reviewList = response.data.reviewList;
+        storeInfo = response.data.store;
+      })
+      .catch(function (error) {
+        console.log('음식점 정보를 가져오지 못 했습니다.');
+      })
+      .finally(function () {
+        console.log('음식점 정보 요청')
+      });
+
 
     //test용 더미데이터 
     const dummy = {
@@ -77,6 +101,7 @@ const DetailInfo = ({loginState}) => {
    return (
        <>
            <AppLayout/>
+
            
            <div className='name'>{dummy.data.store.storename}</div>
            
