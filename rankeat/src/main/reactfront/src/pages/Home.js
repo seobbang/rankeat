@@ -5,6 +5,7 @@ import AppLayout from "./AppLayout";
 import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri"
 import { IoMoon } from "react-icons/io5"
 import SearchBar from "./SearchBar";
+import axios from "axios";
 
 const Home = ({loginState, setLoginState}) => {
     let totalRank = null;
@@ -13,15 +14,15 @@ const Home = ({loginState, setLoginState}) => {
     let yeonHuiRank = null;
 
 
-    // axios.get("/main")
-    //     .then(function (response) {
-    //         totalRank = response.rankall;
-    //         ewhaRank = response.rank1;
-    //         sinChonRank = response.rank2;
-    //         yeonHuiRank = response.rank3;
-    //     }).catch(function(error) {
-    //     console.log("랭킹 가져오기 오류")
-    // });
+    axios.get("http://localhost:8080/main")
+        .then(function (response) {
+            totalRank = response.rankall;
+            ewhaRank = response.rank1;
+            sinChonRank = response.rank2;
+            yeonHuiRank = response.rank3;
+        }).catch(function(error) {
+        console.log("랭킹 가져오기 오류")
+    });
 
 
 

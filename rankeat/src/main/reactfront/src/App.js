@@ -1,5 +1,5 @@
 import Home from "./pages/Home";
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Login from "./pages/Login";
@@ -9,14 +9,13 @@ import Personal from "./pages/Personal";
 import DetailInfo from "./pages/DetailInfo";
 import WriteReview from "./pages/WriteReview";
 import MainPage from "./pages/MainPage";
-import Product from "./pages/Product";
 import Savepage from "./pages/Savepage";
 import ListInfo from "./pages/ListInfo";
 import Postpage from "./pages/Postpage";
 import PostSearchpage from "./pages/PostSearchpage";
 
 function App() {
-    const [loginState, setLoginState] = useState(true);
+    const [loginState, setLoginState] = useState(false);
 
     return (
         <BrowserRouter>
@@ -30,13 +29,11 @@ function App() {
                     <Route path='/DetailInfo' element={<DetailInfo loginState={{loginState}}/>}/>
                     <Route  path='/WriteReview' element={<WriteReview />}/>
                     <Route path="/MainPage" element = {<MainPage/>}/>
-                    {/*<Route path = "/Product" element= {<Product/>} />*/}
                     <Route path = "/Savepage" element={<Savepage />}/>
                     <Route path = "/ListInfo" element={<ListInfo />}/>
                     <Route path = "/PostPage" element={<Postpage/>}/>
                     <Route path={ "/PostSearchpage"} element={<PostSearchpage/>}/>
                 </Routes>
-
             </div>
         </BrowserRouter>
     );

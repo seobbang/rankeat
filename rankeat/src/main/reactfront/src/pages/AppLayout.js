@@ -61,7 +61,7 @@ const AppLayout = ({loginState, setLoginState}) => {
                         <button id="logOut" onClick={()=>{
                             if (window.confirm("로그아웃 하시겠습니까?")) {
                                 setLoginState(false);
-                                sessionStorage.setItem('user_id', null);
+                                window.localStorage.setItem('user_id', null);
                             }
                         }}> 로그아웃</button>
                     </div>`
