@@ -1,0 +1,57 @@
+.cancelproduct {
+  justify-content: center;
+  text-justify: center;
+  text-align: center;
+  margin :10px;
+  padding : 5px;
+  position :relative;
+
+}
+
+.cancelproduct_info {
+
+   justify-content: center;
+   flex-direction: column;
+   width : 200px;
+   
+
+
+}
+
+.cancelproduct_img {
+
+  width : 200px;
+  height : 200px;
+  margin :2px;
+  padding : 2px;
+}
+
+.cancelproduct_name {
+  width : 200px;
+  text-align: center;
+  text-justify: center;
+  margin : 2px;
+  padding : 3px;
+
+}
+
+.cancelproduct_name > h3 {
+  color : white;
+  font-weight:bold;
+  font-size : 1.3rem;
+  
+}
+
+.cancelbtn {
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 51, 51, 0.77);
+}
+
+.cancelbtn> button {
+  border-radius: 25%;
+  background-color: rgba(255, 51, 51, 0.77);
+  font-size: 0.7rem;
+  color : white;
+  margin-top : 5px;
+}

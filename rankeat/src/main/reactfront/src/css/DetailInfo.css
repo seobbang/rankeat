@@ -1,0 +1,439 @@
+body {
+    justify-content: center;  
+    align-items: center;      
+    font-family: 'Nanum Pen Script';    
+    min-height: 100vh;   
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* 업체 상세정보 페이지 */
+
+.name {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    color : black;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+
+/* ReataurantInfo.js */
+
+.detailInfo {
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+
+.detailInfo .info, .detailInfo .info_right{
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+#restaurantInfo {
+    padding-right: 25px;
+    border-right: 3px solid rgba(223, 213, 213, 0.77);
+}
+
+#restaurantInfo .representative_image {
+    margin: 0px auto; 
+    margin-bottom: 50px;
+    justify-content: space-around;
+
+    border: 1px solid black;
+    width: 300px;
+    height: 170px;
+}
+
+#restaurantInfo .keywords,
+#restaurantInfo .other_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#restaurantInfo .keywords{
+    margin-bottom: 30px;
+    justify-content: space-around;
+
+    font-size: 17px;
+    font-weight: bold;
+    font-style: italic;
+
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(112, 103, 103);
+}
+
+#restaurantInfo .other_info {
+    flex-wrap: wrap;
+}
+
+.other_info, .other_info div {
+    display: flex;
+}
+
+.other_info div {
+    flex-basis: 100%;
+}
+
+.other_info .category {
+    padding: 10px;
+    flex-basis: 30%;
+    font-size: 13px;
+    color: rgb(112, 103, 103);
+}
+
+.other_info .info {
+    padding: 10px;
+    flex-basis: 70%;
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+}
+
+
+/* Rating.js */
+
+.rating {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding-left: 20px;
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+.rating .moon_grade {
+    flex-basis: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.rating .totalAssessment {
+    flex-basis: 45%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 10px;
+
+    font-size: 14px;
+}
+
+.totalAssessment div {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.totalAssessment .category{
+    flex-basis: 40%;
+}
+
+.totalAssessment .info {
+    flex-basis: 60%;
+}
+
+.moon_grade .moon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+
+    margin-bottom: 15px;
+}
+
+/* .moon_grade .moon div {
+
+} */
+
+.moon_grade .grade {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.rating .btn_reviewing {
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.btn_reviewing button {
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgba(255,51,51,0.77);
+    border: none;
+    color: white;
+    font-size: 17px;
+
+    box-shadow: 0 8px 16px 0 rgba(144, 137, 137, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+.btn_reviewing button:hover {
+    box-shadow: 350px 0 0 0 rgba(0,0,0,0.25) inset;
+}
+
+
+/* ViewReview.js */
+
+.viewReview {
+    width: 70%;
+    margin: auto;
+    margin-top: 70px;
+}
+
+
+.viewReview .title {
+    font-size: 27px;
+    color: rgba(255,51,51,0.77);
+    font-weight: bold;
+
+    padding-bottom: 30px;
+}
+
+.viewReview .reviewBox {
+    display: flex;
+    flex-direction: row;
+
+    border-bottom: 2px solid rgba(189, 178, 178, 0.77);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.reviewBox .nick {
+    font-size: 15px;
+    flex-basis: 10%;
+    margin: auto;
+    text-align: center;
+}
+
+.nick span {
+    font-weight: 600;
+}
+
+.reviewBox .assessment {
+    font-size: 11px;
+    flex-basis: 20%;
+    padding-left: 30px;
+}
+
+.reviewBox .assessment div {
+    padding-bottom: 4px;
+}
+
+/* .totalAssessment div {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.totalAssessment .category{
+    flex-basis: 40%;
+}
+
+.totalAssessment .info {
+    flex-basis: 60%;
+} */
+
+.reviewBox .statement {
+    font-size: 12px;
+    flex-basis: 70%;
+
+    border: 2px solid rgba(223, 213, 213, 0.77);
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+/*=============================================================================================================================*/
+
+/* 맛집 리스트 생성 팝업 */
+
+.createList {
+    margin: auto;
+    background-color: white;
+    border: 5px solid rgba(290,51,51,0.6);
+    border-radius: 10px;
+    width: 300px;
+}
+
+.createList .inputBox {
+    padding: 25px;
+    padding-bottom: 20px;
+}
+
+.inputBox :nth-child(1) {
+    font-size: 16px;
+    font-weight: 550;
+    padding-bottom: 5px;
+}
+
+.inputBox :nth-child(3), .inputBox :nth-child(5) {
+    font-size: 13px;
+    font-weight: 550;
+    padding-bottom: 5px;
+}
+
+.inputBox input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1.5px solid rgb(187, 185, 185);
+    padding-left: 5px;
+    margin-bottom: 15px;
+    width: 80%;
+    height: 23px;
+}
+
+/* .inputBox textarea {
+    border: 1.5px solid rgb(187, 185, 185);
+    width: 90%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 11px;
+} */
+
+.createList .keywords {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.createList input[type=checkbox]+label {
+    background-color: rgb(187, 185, 185);
+    border: none;
+    border-radius: 3px;
+    
+    margin:5px;
+    padding: 0.6%;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+}
+
+.createList input[type=checkbox]+label:hover {
+    background-color: rgba(255,51,51,0.77);
+}
+
+.createList input[type='checkbox']+label:active {
+    border: 2px inset rgba(255,51,51,0.77)
+}
+
+.createList input[type="checkbox"]:checked+label {
+    background-color: rgba(255,51,51,0.77)
+}
+
+.createOrNot{
+    display: flex;
+    justify-content: space-between;
+
+    height: 35px;
+
+    border-top: 2px dotted rgb(187, 185, 185);
+}
+
+.createOrNot button {
+    margin-top: 10px;
+    width: 40%;
+    border: none;
+    border-radius: 3px;
+    background-color: white ;
+    color: rgb(187, 185, 185);
+    font-weight: bold ;
+    font-size: 15px;
+}
+
+
+.createOrNot button:hover {
+    color:rgb(8, 181, 211);
+    background-color: white;
+}
+
+/*=============================================================================================================================*/
+
+/* 내 맛집 리스트 드롭다운 메뉴 */
+/* MyList_dropdown.js */
+
+.myList {
+    display: flex;
+    justify-content: end;
+}
+
+.myList #dropdown-basic-button {
+    background-color: white;
+    border: 2px solid rgba(255,51,51,0.77);
+    border-radius: 10px;
+    color: rgba(255,51,51,0.77);
+    /* color: rgb(100, 98, 98); */
+    width: 160px;
+    font-size: 13px;
+}
+
+#dropdown-basic-button .dropdownItem{
+    color: black;
+    border: 1px solid rgba(255,51,51,0.77);
+    width: 160px;
+    font-size: 10px;
+}
+
+#myListdropdown,#createListDropdown {
+    font-size: 15px;
+}
+
+.addListModal, .alreadyExistsModal, .createListModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.addListModal .content, .alreadyExistsModal .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 300px;
+    height: 120px;
+
+    background-color:rgb(255, 255, 255);
+    border: 3px solid rgba(255,51,51,0.77);
+    border-radius: 20px;
+}
+
+.addListModal .content div, .alreadyExistsModal .content div {
+    display:flex;
+    justify-content: center;
+    
+    width:100%;
+    font-size: 16px;
+    color:  rgba(255,51,51,0.77);
+}
+
+.addListModal img, .alreadyExistsModal img {
+    width: 50px;
+    height: 50px;
+}
+
+.createListModal {
+    background-color: rgba(0, 0, 0, 0.2);
+}

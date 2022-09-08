@@ -1,0 +1,35 @@
+.graybox_1{
+    background-color: rgb(224, 224, 224);
+    width:1000px;
+    height:160px;
+    margin:auto;
+
+}
+
+.graybox_2{
+    background-color: rgb(224, 224, 224);
+    width:1000px;
+    height:160px;
+    margin:auto;
+}
+
+.graybox_3{
+    background-color: rgb(224, 224, 224);
+    width:1000px;
+    height:160px;
+    margin:auto;
+}
+
+.graybox_4{
+    background-color: rgb(224, 224, 224);
+    width:1000px;
+    height:160px;
+    margin:auto;
+}
+
+
+.textbox{
+    margin-left:10px;
+    margin-top:20px;
+    font-size:16px;
+}

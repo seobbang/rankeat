@@ -1,0 +1,283 @@
+/* 상단바 */
+header {
+    background-color: rgba(255, 51, 51, 0.77);
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(15px + 2vmin);
+    color: white;
+
+    margin-bottom: 50px;
+
+    position:relative;
+}
+
+header h1 {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.openMenu {
+    padding: 0;
+
+    position:absolute;
+    left:0;
+    z-index: 1;
+
+    width: 60px;
+    height: 60px;
+
+    background : none;
+    border:none;
+
+    cursor: pointer;
+}
+
+#menuIcon {
+    color: white;
+    width: 35px;
+    height: 35px;
+}
+
+/* 검색바 */
+
+.searchIcon {
+    display: inline-block;
+    height:50px;
+    width: 60px;
+    background-color: rgba(255, 51, 51, 0.77);
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+#searchIcon {
+    position: relative;
+    top:10px;
+    color: white;
+    height:30px;
+    width:30px;
+}
+.search button {
+    font-size: 16.5px;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    height: 45px;
+    width: 163px;
+}
+
+.search button:hover {
+    font-weight: bold;
+}
+
+.select {
+    background-color: rgb(41, 128, 185);
+}
+
+.unselect {
+    background-color: rgb(182, 180, 180);
+}
+
+.search input {
+    position:relative;
+    bottom:0.5px;
+    border: 1.5px solid rgb(94, 94, 94);
+    border-left: none;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    width: 700px;
+    height: 45px;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search {
+    margin-bottom: 100px;
+}
+
+/* 사이드바 - 로그인 전 */
+.sidebar {
+    background-color: rgb(224, 224, 224);
+    position:fixed;
+    height: 100%;
+    width: 320px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+
+
+}
+
+.menuBeforeLogin {
+    background-color: white;
+
+    width:100%;
+    padding: 50px 0;
+
+    border-top: 4px solid rgba(255, 51, 51, 0.77);
+    border-bottom: 4px solid rgba(255, 51, 51, 0.77);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login, #signUp {
+    width:200px;
+    height:40px;
+    margin: 10px 0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#login {
+    background-color: rgba(255, 51, 51, 0.55);
+}
+
+#signUp {
+    background-color: rgba(255, 51, 51, 0.77);
+}
+
+.exit {
+    position:fixed;
+    top:5px;
+    left:280px;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+#exit {
+    color: rgb(94, 94, 94);
+    height: 30px;
+    width: 30px;
+}
+
+/* 사이드바 - 로그인 후 */
+.sidebarAfterLogin {
+    background-color: rgb(224, 224, 224);
+    position:fixed;
+    height: 100%;
+    width: 320px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    transform:translate(0,0);
+    transition:transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile, .listMenu, .reviewMenu{
+    background-color: white;
+    width:100%;
+    border-top: 4px solid rgba(255, 51, 51, 0.77);
+}
+
+.profile {
+    padding: 30px 0;
+    position: relative;
+    top : 10%;
+    border-bottom: 4px solid rgba(255, 51, 51, 0.77);
+    text-align: center;
+}
+
+#userIcon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 10px;
+    color: rgb(70, 70, 70);
+}
+
+.listMenu {
+    position: relative;
+    top:15%;
+    height: 150px;
+}
+
+.reviewMenu {
+    position: relative;
+    top : 20%;
+    height: 110px;
+}
+
+.editOrLogout{
+    position: relative;
+    left: 17px;
+    top: 30%;
+    height: 30px;
+}
+
+.sidebarAfterLogin h3 {
+    position:absolute;
+    left: 20px;
+}
+
+#myList, #saveList, #myReview {
+    color: black;
+    background-color: white;
+    position: absolute;
+    left: 25px;
+    top : 70px;
+    border: none;
+    cursor: pointer;
+}
+
+#saveList {
+    top : 110px;
+}
+
+#myList:hover, #saveList:hover, #myReview:hover {
+    font-weight: bold;
+}
+
+#editMyInfo {
+    background-color: rgb(224, 224, 224);
+    color:black;
+    font-size: 15px;
+    cursor: pointer;
+
+    border:none;
+    border-right: 1px solid black;
+    border-radius: 0;
+
+    width: 135px;
+    height: 25px;
+}
+
+#logOut {
+    border: none;
+    background-color: rgb(224, 224, 224);
+    color:black;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100px;
+}
+
+#editMyInfo:hover, #logOut:hover {
+    font-weight: bold;
+}
+
+#editMyInfoIcon {
+    position: relative;
+    left: 13px;
+    top: 4px;
+    width:20px;
+    height:20px;
+}
