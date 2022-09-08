@@ -12,8 +12,6 @@ const SearchBar = () => {
         }
     }
 
-const searchWord = "";
-
 return (
     <div className={"SearchBar"}>
         {/* 검색창 */}
